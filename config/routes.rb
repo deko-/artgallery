@@ -1,11 +1,25 @@
 Artgallery::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/contact"
+
+  get "pages/about"
+
+  get "pages/faq"
+
+  get "pages/tos"
+
+  get "pages/shipping"
+
+  get "pages/press"
+
   devise_for :users
 
   resources :artworks
 
   resources :users
 
-  root :to => "users#index#"
+  root :to => "pages#home"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
