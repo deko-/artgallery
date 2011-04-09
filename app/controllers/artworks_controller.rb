@@ -41,6 +41,7 @@ class ArtworksController < ApplicationController
   # POST /artworks.xml
   def create
     @artwork = Artwork.new(params[:artwork])
+    @artwork.image = params[:image]
 
     respond_to do |format|
       if @artwork.save

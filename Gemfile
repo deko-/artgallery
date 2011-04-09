@@ -16,6 +16,8 @@ gem 'fastercsv'
 gem 'omniauth' # Facebook authentication
 gem 'compass', '>= 0.10.6' # SASS Framework
 gem 'client_side_validations' # javascript validations
+gem 'carrierwave'
+gem 'fog'
 
 # Use unicorn as the web server
 # gem 'unicorn'

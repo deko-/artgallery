@@ -17,6 +17,7 @@
     <td><%= artwork.description %></td>
     <td><%= artwork.height %></td>
     <td><%= artwork.width %></td>
+    <td><%= image_tag artwork.image_url %></td>
     <td><%= link_to 'Show', artwork %></td>
     <td><%= link_to 'Edit', edit_artwork_path(artwork) %></td>
     <td><%= link_to 'Destroy', artwork, :confirm => 'Are you sure?', :method => :delete %></td>
