@@ -2,7 +2,8 @@
 <html>
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "Sandbox Contemporary" %></title>
-    <%= stylesheet_link_tag "compiled/resets", "compiled/application", :media => "screen" %>
+    <%= stylesheet_link_tag "compiled/resets", :media => "screen" %>
+    <%= stylesheet_link_tag "compiled/application" %>
     <%= javascript_include_tag "compiled/jquery.min.js", "compiled/rails.min.js", "application.js" %>
     <%= csrf_meta_tag %>
     <%= yield(:head) %>
