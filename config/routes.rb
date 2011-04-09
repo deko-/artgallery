@@ -1,17 +1,17 @@
 Artgallery::Application.routes.draw do
-  get "pages/home"
+  match "home" => "pages#home"
 
-  get "pages/contact"
+  match "contact" => "pages#contact"
 
-  get "pages/about"
+  match "about" => "pages#about"
 
-  get "pages/faq"
+  match "faq" => "pages#faq"
 
-  get "pages/tos"
+  match "tos" => "pages#tos"
 
-  get "pages/shipping"
+  match "shipping" => "pages#shipping"
 
-  get "pages/press"
+  match "press" => "pages#press"
 
   devise_for :users
 

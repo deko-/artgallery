@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
+gem 'rails', '3.0.6'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -16,8 +16,9 @@ gem 'fastercsv'
 gem 'omniauth' # Facebook authentication
 gem 'compass', '>= 0.10.6' # SASS Framework
 gem 'client_side_validations' # javascript validations
-gem 'carrierwave'
-gem 'fog'
+gem 'carrierwave' # file upload
+gem 'fog' # s3 gem for carrierwave
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git' # admin interface
 
 # Use unicorn as the web server
 # gem 'unicorn'
