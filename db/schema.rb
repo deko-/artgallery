@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110409202609) do
+ActiveRecord::Schema.define(:version => 20110409215620) do
 
   create_table "artworks", :force => true do |t|
     t.string   "name"
@@ -35,6 +35,20 @@ ActiveRecord::Schema.define(:version => 20110409202609) do
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_histories_on_item_and_table_and_month_and_year"
+
+  create_table "roles", :force => true do |t|
+    t.string   "name"
+    t.integer  "mask"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_roles", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "role_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
