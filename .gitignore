@@ -1,0 +1,7 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
+config/s3.yml
+config/database.yml
+config/initializers/fog.rb
