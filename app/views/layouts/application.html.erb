@@ -11,7 +11,7 @@
   	<div id="top-bar">
   		<div id="status">
   			<% if user_signed_in? %>
-    			<span>Currently logged in as <a class="user" href="#"><%= current_user.email %></a>. <%= link_to "Logout", destroy_user_session_path %>?</span>
+    			<span>Currently logged in as <a class="user" href="#"><%= current_user.email %></a>. <%= link_to "Logout", destroy_user_session_path, :class => "logout" %>?</span>
     		<% else %>
     			<%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Sign In", new_user_session_path %>
     		<% end %>
@@ -77,7 +77,6 @@
       <div id="images">
       	<ul>
       		<li><a href="#"><img src="" alt="image" /></a></li>
-      		<li><a href="#"><img src="#" alt="image" /></a></li>
       		<li><a href="#"><img src="#" alt="image" /></a></li>
       		<li><a href="#"><img src="#" alt="image" /></a></li>
       		<li><a href="#"><img src="#" alt="image" /></a></li>
