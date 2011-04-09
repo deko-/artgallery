@@ -10,7 +10,11 @@
   <body>
   	<div id="top-bar">
   		<div id="status">
-    		<span>Currently logged in as <a class="user" href="#">Joakim Runeberg</a>. <a class="logout" href="user/logout">Logout</a>?</span>
+  			<% if user_signed_in? %>
+    			<span>Currently logged in as <a class="user" href="#"><%= current_user.email %></a>. <%= link_to "Logout", destroy_user_session_path %>?</span>
+    		<% else %>
+    			<%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+    		<% end %>
     	</div>
   	</div>	
     <div id="container">
