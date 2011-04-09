@@ -5,11 +5,17 @@ gem 'rails', '3.0.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
-gem "devise"
-gem 'carrierwave'
-gem 'rmagick'
-gem 'fog'
+gem 'mysql2' # database
+gem 'jquery-rails' # jQuery
+gem 'nifty-generators' # Improving views
+gem 'devise' # User setup
+gem 'cancan' # Rights management
+gem 'gravatar' # Avatar generation based on email
+gem 'devise_ldap_authenticatable'
+gem 'fastercsv'
+gem 'omniauth' # Facebook authentication
+gem 'compass', '>= 0.10.6' # SASS Framework
+gem 'client_side_validations' # javascript validations
 
 # Use unicorn as the web server
 # gem 'unicorn'

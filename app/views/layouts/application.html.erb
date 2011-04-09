@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= title %></title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<%= yield %>
+  <head>
+    <title><%= content_for?(:title) ? yield(:title) : "Sandbox Contemporary" %></title>
+    <%= stylesheet_link_tag "compiled/resets", "compiled/application" %>
+    <%= javascript_include_tag "compiled/jquery.min.js", "compiled/rails.min.js", "application.js" %>
+    <%= csrf_meta_tag %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+  	<div id="top-bar">
+  		<div id="status">
+    		<span>Currently logged in as <a class="user" href="#">Joakim Runeberg</a>. <a class="logout" href="user/logout">Logout</a>?</span>
+    	</div>
+  	</div>	
+    <div id="container">
 
-</body>
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+      
+      
+      <div id="logo"><h1>Sandbox Contemporary</h1></div>
+      <nav>
+      	<ul>
+      		<li><a href="#">Home</a></li>
+      		<li><a href="#">About</a></li>
+      		<li><a href="#">Collectors</a></li>
+      		<li><a href="#">Other</a></li>
+      	</ul>
+      </nav>
+      
+      
+      <%= content_tag :h1, yield(:title) if show_title? %>
+      <div id="yield">
+      	<%= yield %>
+      </div>
+    </div>
+  </body>
 </html>
