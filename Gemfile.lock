@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/sferik/rails_admin.git
+  revision: 1ee2f2af816bd484207f43d87f859fd2b6e1b8b5
+  specs:
+    rails_admin (0.0.1)
+      builder (~> 2.1.0)
+      rails (~> 3.0.6)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -120,7 +128,7 @@ GEM
       ruby-openid (>= 2.0.3)
     rack-test (0.5.7)
       rack (>= 1.0)
-    rails (3.0.3)
+    rails (3.0.6)
       actionmailer (= 3.0.3)
       actionpack (= 3.0.3)
       activerecord (= 3.0.3)
@@ -164,4 +172,5 @@ DEPENDENCIES
   mysql2
   nifty-generators
   omniauth
-  rails (= 3.0.3)
+  rails (= 3.0.6)
+  rails_admin!
