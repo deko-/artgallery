@@ -20,6 +20,12 @@
   <%= @artwork.width %>
 </p>
 
+<p>
+  <b>Image:</b>
+  <%= image_tag @artwork.image_url %>
+</p>
+
+
 
 <%= link_to 'Edit', edit_artwork_path(@artwork) %> |
 <%= link_to 'Back', artworks_path %>
