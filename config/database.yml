@@ -12,7 +12,7 @@ development:
   database: artgallery_development
   pool: 5
   username: root
-  password: gamla8
+  password: 
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
