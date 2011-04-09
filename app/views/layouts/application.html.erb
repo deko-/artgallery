@@ -2,7 +2,7 @@
 <html>
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "Sandbox Contemporary" %></title>
-    <%= stylesheet_link_tag "compiled/resets", "compiled/application" %>
+    <%= stylesheet_link_tag "compiled/resets", "compiled/application", :media => "screen, projection" %>
     <%= javascript_include_tag "compiled/jquery.min.js", "compiled/rails.min.js", "application.js" %>
     <%= csrf_meta_tag %>
     <%= yield(:head) %>
@@ -11,9 +11,9 @@
   	<div id="top-bar">
   		<div id="status">
   			<% if user_signed_in? %>
-    			<span>Currently logged in as <a class="user" href="#"><%= current_user.email %></a>. <%= link_to "Logout", destroy_user_session_path %>?</span>
+    			<span>Currently logged in as <a class="user" href="#"><%= current_user.email %></a>. <%= link_to "Logout", destroy_user_session_path, :class => "logout" %>?</span>
     		<% else %>
-    			<%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+    			<%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Sign In", new_user_session_path %>
     		<% end %>
     	</div>
   	</div>	
@@ -39,6 +39,7 @@
       <div id="content">
       	<%= yield %>
       	<div class="animation_box">
+      		<a class="leftControl control" href="#">Left</a>
       		<div class="slide_box">
       			<div class="slideInner">
       				<div class="slide">
@@ -54,14 +55,28 @@
       					<img src="#" />
       				</div>
       			</div>
+      		</div><!-- slide_box end -->
+      		<a class="rightControl control" href="#">Right</a>  		
+      	</div><!-- animation_box end -->
+      	<div class="description">
+      		<div class="name">
+      			<h2>Frogs Rule</h2>
+      			<span>by <a class="author" href="#">Joakim Runeberg</a></span>
       		</div>
-      		
+      		<div class="price">
+      			<span>own it for <a href="#">450<b>€</b></a></span>
+      		</div>
       	</div>
+      </div>
+      <div id="greeting">
+      	<p>
+      	<em>Hello,</em>
+      	we are a virtual gallery aiming to help you find and collect art that you really love.<span class="heart">♥</span>
+      	</p>
       </div>
       <div id="images">
       	<ul>
       		<li><a href="#"><img src="" alt="image" /></a></li>
-      		<li><a href="#"><img src="#" alt="image" /></a></li>
       		<li><a href="#"><img src="#" alt="image" /></a></li>
       		<li><a href="#"><img src="#" alt="image" /></a></li>
       		<li><a href="#"><img src="#" alt="image" /></a></li>
