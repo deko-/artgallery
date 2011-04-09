@@ -34,10 +34,29 @@
       <%= content_tag :h1, yield(:title) if show_title? %>
       <div id="content">
       	<%= yield %>
+      	<div class="animation_box">
+      		<div class="slide_box">
+      			<div class="slideInner">
+      				<div class="slide">
+      					<img src="/images/slide1.png" />
+      				</div>
+      				<div class="slide">
+      					<img src="#" />
+      				</div>
+      				<div class="slide">
+      					<img src="#" />
+      				</div>
+      				<div class="slide">
+      					<img src="#" />
+      				</div>
+      			</div>
+      		</div>
+      		
+      	</div>
       </div>
       <div id="images">
       	<ul>
-      		<li><a href="#"><img src="#" alt="image" /></a></li>
+      		<li><a href="#"><img src="" alt="image" /></a></li>
       		<li><a href="#"><img src="#" alt="image" /></a></li>
       		<li><a href="#"><img src="#" alt="image" /></a></li>
       		<li><a href="#"><img src="#" alt="image" /></a></li>

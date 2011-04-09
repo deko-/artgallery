@@ -57,7 +57,7 @@ h1 {
 
 #container nav {
 	margin-top: 60px;
-	width: 370px;
+	width: 380px;
 	float: right;
 	clear: right;
 	display: inline;
@@ -68,7 +68,7 @@ h1 {
 			display: inline;
 			margin-left: 15px;
 			a {
-				padding: 6px;
+				padding: 4px 7px 7px;
 				font-size: 18px;
 				font-weight: 400;
 				color: #000;
@@ -90,8 +90,9 @@ h1 {
 	background: url("/images/bg.png") transparent 50% 0 no-repeat;
 }
 #images {
-	height: 200px;
-	margin-bottom: 20px;
+  height: 200px;
+  margin: 0 auto 60px;
+  width: 85%;
 	li {
 		display: inline;
 		img {
@@ -117,4 +118,33 @@ h1 {
 	h1 {
 		color: #fff;
 	}
+}
+.animation_box {
+	margin: 10px auto 0;
+	position: relative;
+	width: 645px;
+	left: -9px;
+}
+.slide_box {
+   background: url("/images/frame.png") no-repeat scroll 0 0 transparent;
+    height: 480px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 640px;
+}
+.slideInner {
+   height: 400px;
+    left: 45px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    top: 37px;
+    width: 3000px;
+}
+.slide {
+	float: left;
+	height: 240px;
+	position: relative;
+	width: 554px;
 }
