@@ -93,7 +93,7 @@ h1 {
 #images {
   height: 200px;
   margin: 0 auto 60px;
-  width: 85%;
+  width: 100%;
 	li {
 		display: inline;
 		img {
@@ -217,7 +217,7 @@ h1 {
 	border-bottom: 1px solid #969696;
 	font-family: Helvetica;
 	font-weight: bold;
-	margin-bottom: 70px;
+	margin-bottom: 40px;
 	line-height: 33px;
 	em {
 		color: #ff0899;
@@ -226,4 +226,22 @@ h1 {
 		font-family: arial;
 		color: #ff0899;
 	}
+}
+#images ul {
+	margin-top: 20px;
+}
+#images .filter {
+	display: inline;
+	font-weight: bold;
+	font-size: 19px;
+	margin-bottom: 20px;
+	font-family: helvetica;
+	.active {
+		color: #000;
+	}
+}
+#images .search {
+	float: right;
+	clear: both;
+	margin-top: -20px;
 }
