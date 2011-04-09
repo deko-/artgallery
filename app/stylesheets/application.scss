@@ -4,6 +4,7 @@ body {
 	background: #f8f8f8;	
 }
 a {
+	color: #ff0899;
 	text-decoration: none;
 	&:hover {
 		text-decoration: underline;
@@ -38,9 +39,9 @@ h1 {
 		&.logout {
 			color: #a8a7a7;
 		}
-	&:hover {
-		text-decoration: underline;
-	}	
+		&:hover {
+			text-decoration: underline;
+		}	
 	}
 }
 
@@ -127,7 +128,7 @@ h1 {
 }
 .slide_box {
    background: url("/images/frame.png") no-repeat scroll 0 0 transparent;
-    height: 480px;
+    height: 465px;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
@@ -147,4 +148,49 @@ h1 {
 	height: 240px;
 	position: relative;
 	width: 554px;
+}
+.description {
+  background: none repeat scroll 0 0 #000000;
+  height: 51px;
+  left: -10px;
+  margin: 0 auto;
+  position: relative;
+  top: 19px;
+  width: 678px;
+  color: #fff;
+  .name {  
+  	padding-left: 10px;
+  	float: left;
+  	font-size: 13px;
+    h2 {
+    	color: #fff;
+    	font-size: 20px;
+    	font-weight: 400;
+    	padding-top: 5px;    	
+    }
+    span {
+    	position: relative;
+    	top: 2px;
+    }
+    a {
+    	color: #ff0899;
+    }   
+  }
+  .price {
+  	float: right;
+  	position: relative;
+  	top: 11px;
+  	right: 16px;
+  	height: 100%;
+  	
+  	a {
+  		margin-left: 5px;
+  		color: #fff;
+  		font-size: 24px;
+  		b {
+  			color: #ff0899;
+  			font-weight: normal;
+  		}
+  	}
+  }
 }
