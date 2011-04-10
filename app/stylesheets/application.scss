@@ -94,21 +94,6 @@ h1 {
 	min-height: 720px;
 	background: url("/images/bg.png") transparent 50% 0 no-repeat;
 }
-#images {
-  height: 200px;
-  margin: 0 auto 60px;
-  width: 100%;
-	li {
-		display: inline;
-		img {
-			width: 235px;
-			height: 130px;			
-			display: block;
-			float: left;
-			padding: 5px;
-		}
-	}
-}
 
 #footer {
 	height: 100px;	
@@ -231,13 +216,46 @@ h1 {
 		color: #ff0899;
 	}
 }
+#images {
+  height: 200px;
+  margin: 0 auto 60px;
+  width: 100%;
+	li {
+		display: inline;
+		margin-right: 26px;
+		float: left;
+		img {
+			width: 235px;
+			height: 130px;			
+			display: block;
+			float: left;
+			padding: 5px;
+		}
+	}
+	.filter li {
+		margin-right: 5px;
+	}
+}
 #images ul {
 	margin-top: 20px;
+	float: left;
+	.title {
+		float: left;
+		background: none repeat scroll 0 0 #000000;
+	    clear: both;
+	    color: #FFFFFF;
+	    font-family: georgia;
+	    font-size: 13px;
+	    margin-top: 8px;
+	    padding: 7px;
+	    position: relative;
+	    width: 233px;
+	}
 }
 #images .filter {
 	display: inline;
 	font-weight: bold;
-	font-size: 19px;
+	font-size: 17px;
 	margin-bottom: 20px;
 	font-family: helvetica;
 	.active {
