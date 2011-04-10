@@ -3,7 +3,9 @@
 	<div class="slide_box">
 		<div class="slideInner">
 			<div class="slide">
-				<%= image_tag @artworks.first.image_url, :class => "" %>
+				<% if @artworks.first %>
+					<%= image_tag @artworks.first.image_url, :class => "" %>
+				<% end %>
 			</div>
 			<div class="slide">
 				<img src="#" />
