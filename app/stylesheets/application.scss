@@ -20,6 +20,7 @@ h1 {
 	padding: 0px;
 	width: 65%;
 	background: none;
+	min-width: 670px;
 }
 #top-bar {
 	border-bottom: 1px solid #fff;
@@ -245,4 +246,28 @@ h1 {
 	float: right;
 	clear: both;
 	margin-top: -20px;
+}
+
+/* Form styles */
+
+.field {
+	margin-bottom: 14px;
+	input {
+		margin-top: 3px;
+	}
+	label {
+		background-color: #000000;
+    color: #FFFFFF;
+    font-size: 11px;
+    padding: 1px 6px 6px;
+	}
+}
+#new_artwork {
+	margin-bottom: 15px;
+}
+#artwork_submit {
+	  background: none repeat scroll 0 0 #EEEEEE;
+    border: 1px solid #CCCCCC;
+    margin-top: 10px;
+    padding: 3px 6px;
 }

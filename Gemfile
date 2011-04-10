@@ -5,7 +5,7 @@ gem 'rails', '3.0.6'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2' # database
+gem 'mysql2', '0.2.6'# database
 gem 'jquery-rails' # jQuery
 gem 'nifty-generators' # Improving views
 gem 'devise' # User setup
