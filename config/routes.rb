@@ -1,4 +1,6 @@
 Artgallery::Application.routes.draw do
+  resources :artists
+
   match "home" => "pages#home"
 
   match "contact" => "pages#contact"

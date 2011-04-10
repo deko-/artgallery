@@ -10,7 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110409231501) do
+ActiveRecord::Schema.define(:version => 20110410134727) do
+
+  create_table "artists", :force => true do |t|
+    t.integer  "artist_id"
+    t.integer  "user_id"
+    t.integer  "spotter_id"
+    t.string   "biography"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "artworks", :force => true do |t|
     t.string   "name"
@@ -20,9 +29,9 @@ ActiveRecord::Schema.define(:version => 20110409231501) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
-    t.integer  "user_id"
     t.integer  "views"
     t.integer  "rating"
+    t.integer  "artist_id"
   end
 
   create_table "comments", :force => true do |t|
