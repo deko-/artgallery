@@ -1,4 +1,5 @@
 class ArtistsController < ApplicationController
+	load_and_authorize_resource
   # GET /artists
   # GET /artists.xml
   def index

@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+	load_and_authorize_resource :nested => :artwork
 	# GET /comments
   # GET /comments.xml
 	def index

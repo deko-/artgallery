@@ -3,8 +3,21 @@ class Ability
 
   def initialize(user)
   	user ||= User.new # guest user (not logged in)
-  	if user.admin?
+  	if user.is_admin?
   		can :manage, :all
+  	elsif user.is_spotter?
+  		can :create, Artist
+  		can :update, Artist do |artist|
+  			artist.try(:spotter_id) == user.id
+  		end
+  		can :read, :all
+  	elsif user.is_artist?
+  		can :create, Artwork
+  		can :update, Artwork do |artwork|
+  			artwork.try(:artist_id) == artwork.artist.user_id
+  		end
+  		can :create, Comment
+  		can :read, :all
   	else
   		can :read, :all
   	end

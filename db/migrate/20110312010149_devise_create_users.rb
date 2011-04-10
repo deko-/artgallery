@@ -3,6 +3,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
     create_table(:users) do |t|
       t.string :name
       t.boolean :is_artist
+      t.boolean :is_spotter
+      t.boolean :is_admin
       t.database_authenticatable :null => false
       t.recoverable
       t.rememberable
