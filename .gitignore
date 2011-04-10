@@ -9,3 +9,4 @@ Gemfile
 Gemfile.lock
 *.DS_Store
 /Gemfile.lock
+/config/initializers/fog.rb
