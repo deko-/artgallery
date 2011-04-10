@@ -13,7 +13,7 @@ Artgallery::Application.routes.draw do
 
   match "press" => "pages#press"
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   resources :artworks do
   	resources :comments

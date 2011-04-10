@@ -1,10 +1,10 @@
 <%= form_for([@artwork, @artwork.comments.build]) do |f| %>
-  <% if @artwork.comments.errors.any? %>
+  <% if @comment.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@artwork.comments.errors.count, "error") %> prohibited this comment from being saved:</h2>
+      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
 
       <ul>
-      <% @artwork.comments.errors.full_messages.each do |msg| %>
+      <% @comment.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :text %><br />
-    <%= f.text_field :comment %>
+    <%= f.text_field :body %>
   </div>
   <div class="actions">
     <%= f.submit %>

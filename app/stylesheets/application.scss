@@ -20,8 +20,10 @@ h1 {
 	padding: 0px;
 	width: 65%;
 	background: none;
+	min-width: 670px;
 }
 #top-bar {
+	border-bottom: 1px solid #fff;
 	margin: 0 auto;
 	width: 100%;
 	background: #000;
@@ -53,12 +55,13 @@ h1 {
 	background: url("/images/logo.png") 0 0 no-repeat transparent;
 	h1 {
 		text-indent: -9999px;
+		height: 80px;
 	}
 }
 
 #container nav {
 	margin-top: 60px;
-	width: 380px;
+	width: 325px;
 	float: right;
 	clear: right;
 	display: inline;
@@ -70,7 +73,7 @@ h1 {
 			margin-left: 15px;
 			a {
 				padding: 4px 7px 7px;
-				font-size: 18px;
+				font-size: 14px;
 				font-weight: 400;
 				color: #000;
 				&.active {
@@ -121,7 +124,7 @@ h1 {
 	}
 }
 .animation_box {
-	margin: -20px auto 0;
+	margin: 83px auto 0;
 	position: relative;
 	width: 645px;
 	left: -9px;
@@ -244,4 +247,31 @@ h1 {
 	float: right;
 	clear: both;
 	margin-top: -20px;
+}
+
+/* Form styles */
+
+.field {
+	margin-bottom: 14px;
+	input {
+		margin-top: 3px;
+	}
+	label {
+		background-color: #000000;
+    color: #FFFFFF;
+    font-size: 11px;
+    padding: 1px 6px 6px;
+	}
+}
+#new_artwork {
+	margin-bottom: 15px;
+}
+#artwork_submit {
+	  background: none repeat scroll 0 0 #EEEEEE;
+    border: 1px solid #CCCCCC;
+    margin-top: 10px;
+    padding: 3px 6px;
+}
+.thumb {
+	width: 50px;
 }

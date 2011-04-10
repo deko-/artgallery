@@ -1,3 +1,8 @@
+<script type="text/javascript" charset="utf-8">
+	$('#content').css({
+		background: "none"
+	});
+</script>
 <%= form_for(@artwork, :html => { :multipart => true }) do |f| %>
   <% if @artwork.errors.any? %>
     <div id="error_explanation">

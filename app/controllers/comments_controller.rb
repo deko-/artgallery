@@ -2,8 +2,8 @@ class CommentsController < ApplicationController
 	# GET /comments
   # GET /comments.xml
 	def index
-		@post = Artwork.find(params[:artwork_id])
-    @comments = @post.artwork_comments.all
+		@artwork = Artwork.find(params[:artwork_id])
+    @comments = @artwork.comments.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,7 +25,8 @@ class CommentsController < ApplicationController
   # GET /comments/new
   # GET /comments/new.xml
   def new
-    @comment = Comment.new
+  	@artwork = Artwork.find(params[:artwork_id])
+    @comment = @artwork.comments.new
 
     respond_to do |format|
       format.html # new.html.erb

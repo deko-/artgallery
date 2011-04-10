@@ -11,10 +11,10 @@
   <tr>
     <td><%= comment.artwork_id %></td>
     <td><%= comment.user_id %></td>
-    <td><%= comment.comment %></td>
-    <td><%= link_to 'Show', comment %></td>
-    <td><%= link_to 'Edit', edit_artwork_comment_path(comment) %></td>
-    <td><%= link_to 'Destroy', comment, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= comment.body %></td>
+    <td><%= link_to 'Show', [comment.artwork, comment] %></td>
+    <td><%= link_to 'Edit', edit_artwork_comment_path(comment.artwork, comment) %></td>
+    <td><%= link_to 'Destroy', [comment.artwork, comment], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
