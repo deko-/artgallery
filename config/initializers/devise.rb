@@ -4,7 +4,7 @@ Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in DeviseMailer.
   config.mailer_sender = "noreply@sandboxcontemporary.com"
-	config.omniauth :facebook, "APP_ID", "APP_SECRET"
+	config.omniauth :facebook, "214605415217989", "888c7a610a5e7ea8e3ded748b8971aa4"
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
 
