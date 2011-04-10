@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Artwork ID:</b>
+  <%= @comment.artwork_id %>
+</p>
+
+<p>
+  <b>User ID:</b>
+  <%= @comment.user_id %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @comment.comment %>
+</p>
+
+<%= link_to 'Edit', edit_artwork_comment_path(@comment) %> |
+<%= link_to 'Back', artwork_comments_path %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110409215620) do
+ActiveRecord::Schema.define(:version => 20110409231501) do
 
   create_table "artworks", :force => true do |t|
     t.string   "name"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(:version => 20110409215620) do
     t.datetime "updated_at"
     t.string   "image"
     t.integer  "user_id"
+    t.integer  "views"
+    t.integer  "rating"
+  end
+
+  create_table "comments", :force => true do |t|
+    t.integer  "artwork_id"
+    t.integer  "user_id"
+    t.string   "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "rails_admin_histories", :force => true do |t|

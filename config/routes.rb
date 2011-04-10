@@ -15,7 +15,9 @@ Artgallery::Application.routes.draw do
 
   devise_for :users
 
-  resources :artworks
+  resources :artworks do
+  	resources :comments
+  end
 
   resources :users
 
