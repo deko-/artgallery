@@ -1,0 +1,24 @@
+<h1>Listing comments</h1>
+
+<table>
+  <tr>
+    <th>Artwork ID</th>
+    <th>User ID</th>
+    <th>Comment</th>
+  </tr>
+
+<% @comments.each do |comment| %>
+  <tr>
+    <td><%= comment.artwork_id %></td>
+    <td><%= comment.user_id %></td>
+    <td><%= comment.body %></td>
+    <td><%= link_to 'Show', [comment.artwork, comment] %></td>
+    <td><%= link_to 'Edit', edit_artwork_comment_path(comment.artwork, comment) %></td>
+    <td><%= link_to 'Destroy', [comment.artwork, comment], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Comment', new_artwork_comment_path %>

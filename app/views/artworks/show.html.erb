@@ -11,21 +11,23 @@
 </p>
 
 <p>
-  <b>Height:</b>
-  <%= @artwork.height %>
-</p>
-
-<p>
-  <b>Width:</b>
-  <%= @artwork.width %>
-</p>
-
-<p>
   <b>Image:</b>
   <%= image_tag @artwork.image_url.to_s %>
 </p>
 
+<h2>Comments</h2>
+<%= render :partial => "comments/comment", :collection => @artwork.comments %>
 
+<h2>Add a comment:</h2>
+<%= form_for([@artwork, @artwork.comments.build]) do |f| %>
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
 
 <%= link_to 'Edit', edit_artwork_path(@artwork) %> |
 <%= link_to 'Back', artworks_path %>

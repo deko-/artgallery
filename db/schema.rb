@@ -10,7 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110409215620) do
+ActiveRecord::Schema.define(:version => 20110410134727) do
+
+  create_table "artists", :force => true do |t|
+    t.integer  "artist_id"
+    t.integer  "user_id"
+    t.integer  "spotter_id"
+    t.string   "biography"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "artworks", :force => true do |t|
     t.string   "name"
@@ -20,7 +29,18 @@ ActiveRecord::Schema.define(:version => 20110409215620) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
+    t.integer  "views"
+    t.integer  "rating"
+    t.integer  "artist_id"
+  end
+
+  create_table "comments", :force => true do |t|
+    t.integer  "comment_id"
+    t.integer  "artwork_id"
     t.integer  "user_id"
+    t.string   "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "rails_admin_histories", :force => true do |t|
@@ -53,9 +73,10 @@ ActiveRecord::Schema.define(:version => 20110409215620) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.boolean  "is_artist"
+    t.boolean  "is_spotter"
+    t.boolean  "is_admin"
     t.string   "email",                               :default => "", :null => false
     t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
-    t.string   "password_salt",                       :default => "", :null => false
     t.string   "reset_password_token"
     t.string   "remember_token"
     t.datetime "remember_created_at"

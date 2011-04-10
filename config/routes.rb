@@ -1,4 +1,6 @@
 Artgallery::Application.routes.draw do
+  resources :artists
+
   match "home" => "pages#home"
 
   match "contact" => "pages#contact"
@@ -15,11 +17,13 @@ Artgallery::Application.routes.draw do
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
-  resources :artworks
+  resources :artworks do
+  	resources :comments
+  end
 
   resources :users
 
-  root :to => "pages#home"
+  root :to => "artworks#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
