@@ -3,7 +3,9 @@
 	<div class="slide_box">
 		<div class="slideInner">
 			<div class="slide">
-				<%= image_tag @artworks.first.image_url, :class => "" %>
+				<% if @artworks.first %>
+					<%= image_tag @artworks.first.image_url, :class => "" %>
+				<% end %>
 			</div>
 			<div class="slide">
 				<img src="#" />
@@ -53,33 +55,6 @@ we are a virtual gallery aiming to help you find and collect art that you really
 	<% end %>
 </ul>
 </div>
-
-<h1>Listing artworks</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Height</th>
-    <th>Width</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @artworks.each do |artwork| %>
-  <tr>
-    <td><%= artwork.name %></td>
-    <td><%= artwork.description %></td>
-    <td><%= artwork.height %></td>
-    <td><%= artwork.width %></td>
-    <td><%= image_tag artwork.image_url, :class => "thumb" %></td>
-    <td><%= link_to 'Show', artwork %></td>
-    <td><%= link_to 'Edit', edit_artwork_path(artwork) %></td>
-    <td><%= link_to 'Destroy', artwork, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
 
 <br />
 
