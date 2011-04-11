@@ -142,9 +142,9 @@ ul.breadcrumb li a:hover{
 }
 
 #headerLeft h1#logo span.image_replacement{
-	background-image:url(../../images/rails_admin/logo.png);
-	width:64px;
-	height:46px;
+	background-image:url(../../images/logo.png);
+	width:205px;
+	height:65px;
 }
 
 #headerRight{
