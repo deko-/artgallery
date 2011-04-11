@@ -4,7 +4,11 @@ class ArtworksController < ApplicationController
   # GET /artworks.xml
   def index
     @artworks = Artwork.all
-
+    begin
+      @first_artwork = Artwork.first  
+    rescue
+      "wops"
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @artworks }

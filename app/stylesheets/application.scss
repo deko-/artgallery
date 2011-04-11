@@ -220,22 +220,30 @@ h1 {
   height: 200px;
   margin: 0 auto 60px;
   width: 100%;
+	.thumbnails li {
+		margin-bottom: 30px;
+	}
 	li {
 		display: inline;
 		margin-right: 26px;
 		float: left;
+				
 		img {
 			width: 235px;
 			height: 130px;			
 			display: block;
 			float: left;
-			padding: 5px;
+			padding: 15px;
+			border: 1px solid #eee;
+			background: #fff;
+			
 		}
 	}
 	.filter li {
 		margin-right: 5px;
 	}
 }
+
 #images ul {
 	margin-top: 20px;
 	float: left;
@@ -249,7 +257,8 @@ h1 {
 	    margin-top: 8px;
 	    padding: 7px;
 	    position: relative;
-	    width: 233px;
+	    width: 252px;
+		border-left: 1px solid #F8F8F8;
 	}
 }
 #images .filter {
