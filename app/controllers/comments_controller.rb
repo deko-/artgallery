@@ -38,7 +38,7 @@ class CommentsController < ApplicationController
   # GET /comments/1/edit
   def edit
   	@artwork = Artwork.find(params[:artwork_id])
-    @comment= @artwork.comments.find(params[:id])
+    @comment = @artwork.comments.find(params[:id])
   end
 
   # POST /comments
