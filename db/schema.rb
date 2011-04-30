@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110410134727) do
+ActiveRecord::Schema.define(:version => 20110426120819) do
 
   create_table "artists", :force => true do |t|
     t.integer  "artist_id"
@@ -87,6 +87,7 @@ ActiveRecord::Schema.define(:version => 20110410134727) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "artist_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

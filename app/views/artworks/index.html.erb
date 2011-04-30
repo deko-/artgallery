@@ -49,8 +49,8 @@ we are a virtual gallery aiming to help you find and collect art that you really
 </div>
 <ul class="thumbnails">
 	<% @artworks.each do |artwork| %>
-	<li><a href="#"><%= image_tag artwork.image_url, :class => "" %></a>
-		<div class="title"><%= artwork.name %></div>
+	<li><%= link_to image_tag(artwork.image_url), artwork, :class => "" %></a>
+		<div class="title"><%= link_to artwork.name, artwork %></div>
 	</li>
 	<% end %>
 </ul>

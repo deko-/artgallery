@@ -1,19 +1,32 @@
 <p id="notice"><%= notice %></p>
 
+<div class="animation_box">
+	<a class="leftControl control" href="#">Left</a>
+	<div class="slide_box">
+		<div class="slideInner">
+			<div class="slide">
+				<%= image_tag @artwork.image_url, :class => "" %>
+			</div>
+		</div>
+	</div><!-- slide_box end -->
+	<a class="rightControl control" href="#">Right</a>
+</div><!-- animation_box end -->
+<div class="description">
+	<div class="name">
+		<h2><%= @artwork.name %></h2>
+		<span>by <%= link_to @artwork.artist.user.name, artist_path(@artwork.artist_id), :class => "author" %></span>
+	</div>
+	<div class="price">
+		<span>own it for <a href="#">450<b>€</b></a></span>
+	</div>
+</div>
+</div>
+<div id="greeting">
 <p>
-  <b>Name:</b>
-  <%= @artwork.name %>
+<em>Description:</em>
+<%= @artwork.description %><span class="heart">♥</span>
 </p>
-
-<p>
-  <b>Description:</b>
-  <%= @artwork.description %>
-</p>
-
-<p>
-  <b>Image:</b>
-  <%= image_tag @artwork.image_url.to_s %>
-</p>
+</div>
 
 <h2>Comments</h2>
 <%= render :partial => "comments/comment", :collection => @artwork.comments %>

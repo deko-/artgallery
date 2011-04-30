@@ -47,11 +47,16 @@ class ArtworksController < ApplicationController
   def create
     @artwork = Artwork.new(params[:artwork])
     @artwork.image = params[:image]
+    @artwork.artist_id = current_user
 
     respond_to do |format|
       if @artwork.save
-        format.html { redirect_to(@artwork, :notice => 'Artwork was successfully created.') }
-        format.xml  { render :xml => @artwork, :status => :created, :location => @artwork }
+        if params[:artwork][:cropping]
+           render :action => "crop"
+        else
+          format.html { redirect_to(@artwork, :notice => 'Artwork was successfully created.') }
+          format.xml  { render :xml => @artwork, :status => :created, :location => @artwork }
+        end
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @artwork.errors, :status => :unprocessable_entity }
