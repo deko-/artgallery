@@ -21,6 +21,10 @@ gem 'fog' # s3 gem for carrierwave
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git' # admin interface
 gem 'guard-livereload'
 gem 'guard-compass'
+gem 'guard-bundler'
+gem 'guard-webrick'
+gem 'guard-pow'
+gem 'growl'
 
 # Use unicorn as the web server
 # gem 'unicorn'
