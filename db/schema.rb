@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110410134727) do
+ActiveRecord::Schema.define(:version => 20110502120113) do
 
   create_table "artists", :force => true do |t|
     t.integer  "artist_id"
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(:version => 20110410134727) do
     t.integer  "artist_id"
   end
 
+  add_index "artworks", ["artist_id"], :name => "index_artworks_on_artist_id"
+
   create_table "comments", :force => true do |t|
     t.integer  "comment_id"
     t.integer  "artwork_id"
@@ -42,6 +44,9 @@ ActiveRecord::Schema.define(:version => 20110410134727) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "comments", ["artwork_id"], :name => "index_comments_on_artwork_id"
+  add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
 
   create_table "rails_admin_histories", :force => true do |t|
     t.string   "message"
