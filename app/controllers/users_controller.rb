@@ -41,6 +41,7 @@ class UsersController < ApplicationController
   # POST /users.xml
   def create
     @user = User.new(params[:user])
+    @user.update_attribute :is_admin, true     # set admin if it's the first user
 
     respond_to do |format|
       if @user.save

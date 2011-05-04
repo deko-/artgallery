@@ -1,5 +1,33 @@
 <p id="notice"><%= notice %></p>
-
+<div class="animation_box">
+	<a class="leftControl control" href="#">Left</a>
+	<div class="slide_box">
+		<div class="slideInner">
+			<div class="slide">
+				<% if @artwork %>
+					<%= image_tag @artwork.image_url, :class => "" %>
+				<% end %>
+			</div>
+		</div>
+	</div><!-- slide_box end -->
+	<a class="rightControl control" href="#">Right</a>  		
+</div><!-- animation_box end -->
+<div class="description">
+	<div class="name">
+		<h2><%= @artwork.name %></h2>
+		<span>by <%= link_to @artwork.artist.user.name, artist_path(@artwork.artist), :class => "author" %></span>
+	</div>
+	<div class="price">
+		<span>own it for <a href="#">450<b>€</b></a></span>
+	</div>
+</div>
+</div>
+<div id="greeting">
+<p>
+<em>Hello,</em>
+we are a virtual gallery aiming to help you find and collect art that you really love.<span class="heart"> ♥</span>
+</p>
+</div>
 <p>
   <b>Name:</b>
   <%= @artwork.name %>
