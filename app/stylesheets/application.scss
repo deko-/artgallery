@@ -93,9 +93,6 @@ h1 {
 	min-height: 720px;
 	background: url("/images/bg.png") transparent 50% 0 no-repeat;
 }
-.roflmao {
-	top: 25px;
-}
 #footer {
 	height: 100px;	
 	background: #000;
@@ -146,6 +143,10 @@ h1 {
     position: relative;
     top: 37px;
     width: 3000px;
+	img {
+		height: 390px;
+		width: 554px;
+	}
 }
 .slide {
 	float: left;
