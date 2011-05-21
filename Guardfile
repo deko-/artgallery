@@ -2,7 +2,7 @@
 # More info at https://github.com/guard/guard#readme
 
 guard 'compass' do
-  watch('^app/stylesheets/(.*)\.s[ac]ss')
+  watch('^src/(.*)\.s[ac]ss')
 end
 
 guard 'livereload' do
@@ -11,5 +11,3 @@ guard 'livereload' do
   watch(%r{public/.+\.(css|js|html)})
   watch(%r{config/locales/.+\.yml})
 end
-
-
