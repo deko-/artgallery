@@ -6,6 +6,7 @@ gem 'rails', '3.0.7'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2', '0.2.6'# database
+gem 'rake', '0.8.7'
 gem 'jquery-rails' # jQuery
 gem 'nifty-generators' # Improving views
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git'# User setup
@@ -25,10 +26,17 @@ gem 'guard-bundler'
 gem 'guard-webrick'
 gem 'guard-pow'
 gem 'growl'
+gem 'i18n'
 
 # Use unicorn as the web server
 # gem 'unicorn'
 
+group :development do 
+  gem 'autotest'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'i18n'
+end
 # Deploy with Capistrano
 # gem 'capistrano'
 
@@ -45,6 +53,7 @@ gem 'growl'
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
-# group :development, :test do
-#   gem 'webrat'
-# end
+ group :development, :test do
+   gem 'webrat'
+   gem 'rspec'
+ end
