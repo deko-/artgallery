@@ -3,12 +3,13 @@
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "Sandbox Contemporary" %></title>
     <%= stylesheet_link_tag "compiled/resets", :media => "screen" %>
-    <%= stylesheet_link_tag "compiled/application" %>
+    <%= stylesheet_link_tag "screen.css" %>
     <%= javascript_include_tag "compiled/jquery.min.js", "compiled/rails.min.js", "application.js" %>
     <%= csrf_meta_tag %>
     <%= yield(:head) %>
   </head>
   <body>
+	<!--
   	<div id="top-bar">
   		<div id="status">
   			<% if user_signed_in? %>
@@ -21,29 +22,22 @@
   	</div>
 	<div id="shadow">
 	</div>
+	-->
     <div id="container">
 
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
-      
-      
-      <div id="logo"><a href="/"><h1>Sandbox Contemporary</h1></a></div>
-      <nav>
-      	<ul>
-      		<li><%= link_to "Home", root_path, :class => "active" %></li>
-      		<li><%= link_to "About", about_path %></li>
-      		<li><a href="">Collectors</a></li>
-      		<li><a href="">Other</a></li>
-      	</ul>
-      </nav>
-      
-      
-      <%= content_tag :h1, yield(:title) if show_title? %>
-      <div id="content">
-      	<%= yield %>
-      </div>	
-    
+	    <% flash.each do |name, msg| %>
+	      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+	    <% end %>
+   
+   		<%= render :partial => 'navigation' %>
+
+   
+	    <%= content_tag :h1, yield(:title) if show_title? %>
+	    <div id="content">
+	    	<%= yield %>
+	    </div>	
+    	<div id="footer">
+		</div>
     </div>
 
 	<!-- Google Analytics -->

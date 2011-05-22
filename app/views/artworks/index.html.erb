@@ -1,41 +1,9 @@
-<div class="animation_box">
-	<a class="leftControl control" href="#">Left</a>
-	<div class="slide_box">
-		<div class="slideInner">
-			<div class="slide">
-				<% if @artworks.first %>
-					<%= image_tag @artworks.first.image_url, :class => "" %>
-				<% end %>
-			</div>
-			<div class="slide">
-				<img src="#" />
-			</div>
-			<div class="slide">
-				<img src="#" />
-			</div>
-			<div class="slide">
-				<img src="#" />
-			</div>
-		</div>
-	</div><!-- slide_box end -->
-	<a class="rightControl control" href="#">Right</a>  		
-</div><!-- animation_box end -->
-<div class="description">
-	<div class="name">
-		<h2>Frogs Rule</h2>
-		<span>by <a class="author" href="#">Joakim Runeberg</a></span>
-	</div>
-	<div class="price">
-		<span>own it for <a href="#">450<b>€</b></a></span>
-	</div>
-</div>
-</div>
-<div id="greeting">
-<p>
-<em>Hello,</em>
-we are a virtual gallery aiming to help you find and collect art that you really love.<span class="heart"> ♥</span>
-</p>
-</div>
+<%= render :partial => 'slideshow' %>
+
+
+<br /><br />
+<%= render :partial => 'greeting' %>
+
 <div id="images">
 <div class="filter">
 	<ul>

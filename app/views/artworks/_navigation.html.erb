@@ -1,0 +1,23 @@
+<div id="header">
+	
+	<div id="top-bar">
+		<div id="status">
+			<% if user_signed_in? %>
+				<span>Currently logged in as <a class="user" href=""><%= current_user.email %></a>. <%= link_to "Logout", destroy_user_session_path, :class => "logout" %>?</span>
+			<% else %>
+			<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %> or
+				<%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Sign In", new_user_session_path %>
+			<% end %>
+		</div>
+	</div>
+	
+    <div id="logo"><a href="/"><h1>Sandbox Contemporary</h1></a></div>
+    <nav>
+    	<ul>
+    		<li><%= link_to "Home", root_path, :class => "active" %></li>
+    		<li><%= link_to "About", about_path %></li>
+    		<li><a href="">Collectors</a></li>
+    		<li><a href="">Other</a></li>
+    	</ul>
+    </nav>
+</div>
