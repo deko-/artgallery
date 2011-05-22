@@ -189,7 +189,7 @@ h1 {
   height: 51px;
   font-family: Georgia, Serif;
   text-transform: uppercase;
-  text-shadow: 1px 1px #fff;
+  text-shadow: 1px 1px #eee;
   margin: 0 auto;
   position: relative;
   color: #fff;
@@ -235,16 +235,14 @@ h1 {
 }
 .slidenav div {
 	display: inline;
-	height: 20px;
-	width: 20px;
+	height: 16px;
+	width: 16px;
 	background: #a4a4a4;
 	float: left;
 	margin: 10px;
 }
 .slidenav .active {
 	display: inline;
-	width: 20px;
-	height: 20px;
 	background: #f85063;
 }
 

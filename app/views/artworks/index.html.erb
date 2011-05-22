@@ -2,26 +2,26 @@
 
 
 <br /><br />
-<%= render :partial => 'greeting' %>
+<%#= render :partial => 'greeting' %>
 
 <div id="images">
-<div class="filter">
-	<ul>
-		<li><a href="#" class="active">Latest</a>  / </li>
-		<li><a href="#">Popular</a>  / </li>
-		<li><a href="#">Most Commented</a></li>
+	<div class="filter">
+		<ul>
+			<li><a href="#" class="active">Latest</a>  / </li>
+			<li><a href="#">Popular</a>  / </li>
+			<li><a href="#">Most Commented</a></li>
+		</ul>
+	</div>
+	<div class="search">
+		<input type="text" name="search" value="search.." id="search">
+	</div>
+	<ul class="thumbnails">
+		<% @artworks.each do |artwork| %>
+		<li><%= link_to image_tag(artwork.image_url), artwork %>
+			<div class="title"><%= artwork.name %></div>
+		</li>
+		<% end %>
 	</ul>
-</div>
-<div class="search">
-	<input type="text" name="search" value="search.." id="search">
-</div>
-<ul class="thumbnails">
-	<% @artworks.each do |artwork| %>
-	<li><%= link_to image_tag(artwork.image_url), artwork %>
-		<div class="title"><%= artwork.name %></div>
-	</li>
-	<% end %>
-</ul>
 </div>
 
 <br />
