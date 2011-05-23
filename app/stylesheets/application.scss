@@ -58,7 +58,7 @@ h1 {
 }
 
 #logo {
-	width: 280px; 
+	width: 280px; /* test */
 	height: 85px;
 	margin-top: 20px;
 	float: left;
@@ -120,20 +120,11 @@ h1 {
 .animation_box {
 	margin: 83px auto 0;
 	position: relative;
-	width: 645px;
-	left: -9px;
-	.leftControl {
-		float: left;
-    left: -40px;
-    position: relative;
-    top: 218px;
-	}
-	.rightControl {		
-    float: right;
-    left: 50px;
-    position: relative;
-    top: -245px;
-	}
+	width: 100%;
+	background-color: #eee;
+	height: 200px;
+	display: block;
+
 }
 .slide_box {
    background: url("/images/frame.png") no-repeat scroll 0 0 transparent;

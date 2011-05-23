@@ -9,6 +9,6 @@ describe ArtworksController do
   it "assigns @artworks" do
        artwork = Artwork.create
        get :index
-       assigns(:artworks).should eq([artwork]) # checks that it can assign artworks
+       assigns(:artworks).should eq([artwork]) # test
   end
 end

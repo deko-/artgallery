@@ -1,0 +1,20 @@
+<div class="animation_box">
+				<% if @artworks.first %>
+					<%= image_tag @artworks.first.image_url, :class => "" %>
+				<% else %>
+					<%= image_tag "/images/bosch.png", :title => "title", :class => "slide_image" %>
+				<% end %>	
+</div><!-- animation_box end -->
+<div class="description">
+	<div class="name">
+		<h2>Hieronymus Bosch</h2>
+		<a class="artwork" href="#">Chaos</a>
+	</div>
+	
+	<div class="slidenav">
+		<div class="active"></div>
+		<div></div>
+		<div></div>
+	</div>
+	
+</div>
