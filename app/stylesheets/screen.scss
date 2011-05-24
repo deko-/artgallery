@@ -21,9 +21,10 @@ body {
 	
 }
 a {
-	color: #ff0899;
+	color: #F85063;
 	text-decoration: none;
 	&:hover {
+		color: #d93247;
 	//	text-decoration: underline;
 	}
 }
@@ -130,17 +131,41 @@ h1 {
 	//background: url("/images/bg.png") transparent 50% 0 no-repeat;
 }
 #footer {
-	height: 100px;	
-	background: #000;
-	position: relative;
+	height: 200px;	
+	border-top: 1px solid #999;
 	width: 100%;
-	bottom: 0;
 	padding: 0;
 	margin: 60px 0 0;
 	float: left;
-	
+	font-size: 12px;
+	.box {
+		width: 95px;
+		float: left;
+		margin-left: 50px;
+		text-align: left;
+	}
+	h2 {
+		font-weight: bold;
+		margin-bottom: 12px;
+		color: #777777;
+	}
 	h1 {
 		color: #fff;
+	}
+	.links {
+		margin-top: 30px;
+		float: right;
+		text-align: right;
+		li {
+			padding: 3px;
+			
+		}
+		a {
+			color: #777;
+			&:hover {
+				color: #000;	
+			}
+		}
 	}
 }
 .animation_box {
