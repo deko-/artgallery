@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-	load_and_authorize_resource :through => :artwork
+	load_and_authorize_resource
 	# GET /comments
   # GET /comments.xml
 	def index

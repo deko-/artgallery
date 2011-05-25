@@ -28,20 +28,6 @@
 we are a virtual gallery aiming to help you find and collect art that you really love.<span class="heart"> ♥</span>
 </p>
 </div>
-<p>
-  <b>Name:</b>
-  <%= @artwork.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @artwork.description %>
-</p>
-
-<p>
-  <b>Image:</b>
-  <%= image_tag @artwork.image_url.to_s %>
-</p>
 
 <h2>Comments</h2>
 <%= render :partial => "comments/comment", :collection => @artwork.comments %>
