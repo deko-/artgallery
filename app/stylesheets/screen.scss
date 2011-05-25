@@ -125,7 +125,7 @@ h1 {
 	}
 }
 #content {
-	padding-top: 20px;
+	padding-top: 50px;
 	clear: both;
 	border-top: 1px solid #969696;
 	min-height: 720px;
@@ -434,4 +434,8 @@ h1 {
 input {
 	 margin-bottom: 10px;
     margin-top: 4px;
+}
+
+#wrapper {
+	background: url("/images/room_bg.png") no-repeat 50% 99px transparent;
 }
