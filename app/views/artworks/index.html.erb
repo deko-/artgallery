@@ -1,14 +1,15 @@
 <%= render :partial => 'slideshow' %>
 
 
-<br /><br />
-<%#= render :partial => 'greeting' %>
+
+<%= render :partial => 'greeting' %>
 
 <%= render :partial => 'thumbnails' %>
 
 <br />
-
-<%= link_to 'New Artwork', new_artwork_path %>
+<div class="button_holder">
+	<%= link_to 'New Artwork', new_artwork_path, :class => "button grey" %>
+</div>
 
 
 <div id="footer">

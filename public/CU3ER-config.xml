@@ -1,0 +1,172 @@
+﻿<data>
+  <debug>0</debug><referral>lwYHLWgiTuBmzrD5I</referral>
+  <project_settings>
+    <width>960</width>
+    <height>350</height>
+  </project_settings>
+  <settings>
+    <folder_images>images</folder_images>
+    <folder_fonts>fonts</folder_fonts>
+    <background>
+      <color transparent="true">0xffffff</color>
+    </background>
+    <start_slide>1</start_slide>
+    <auto_play>true</auto_play>
+    <randomize_slides>false</randomize_slides>
+    <pause_on_rollover>true</pause_on_rollover>
+    <branding align_to="stage" align_pos="TR" x="-10" y="10">
+      <remove_logo_loader>false</remove_logo_loader>
+      <remove_right_menu_info>false</remove_right_menu_info>
+      <remove_right_menu_licence>false</remove_right_menu_licence>
+    </branding>
+    <camera x="-3" y="-1" z="6" angleX="0" angleY="0" angleZ="0" lens="8"/>
+  </settings>
+  <fonts/>
+  <preloader type="linear" align_pos="MC" width="200" height="20" x="0" y="0">
+    <background padding="5">
+      <tweenShow tint="0xe44557" alpha="0.85" x="0" y="0"/>
+      <tweenOver alpha="1" tint="0xe44557"/>
+      <tweenHide alpha="0"/>
+    </background>
+    <loader>
+      <tweenShow tint="0xFFFFFF" alpha="0.8"/>
+      <tweenOver tint="0xFFFFFF" alpha="1"/>
+      <tweenHide tint="0xFFFFFF" alpha="0"/>
+    </loader>
+  </preloader>
+  <controls>
+    <prev_button align_pos="BR" width="30" height="30" x="-51" y="-19">
+      <auto_hide time="3">false</auto_hide>
+      <hide_on_transition>true</hide_on_transition>
+      <background round_corners="15,0,0,15">
+        <tweenShow tint="0xffffff" alpha="0.2" x="0" y="0" scaleX="1" scaleY="1"/>
+        <tweenOver tint="0xffffff" alpha="0.9" x="0" y="0" scaleX="1" scaleY="1"/>
+        <tweenHide tint="0xffffff" alpha="0" x="0" y="0" scaleX="1" scaleY="1"/>
+      </background>
+      <symbol type="2" align_pos="MC" x="0" y="0">
+        <tweenShow alpha="1" scaleX="0.3" scaleY="0.3" tint="0xe44557"/>
+        <tweenOver tint="0xe44557" scaleX="0.4" scaleY="0.4" alpha="1" x="0" y="0"/>
+        <tweenHide tint="0x2185c5" scaleX="0.2" scaleY="0.2" alpha="0" x="0" y="0"/>
+      </symbol>
+    </prev_button>
+    <next_button align_pos="BR" width="30" height="30" x="-20" y="-20">
+      <auto_hide time="3">false</auto_hide>
+      <hide_on_transition>true</hide_on_transition>
+      <background round_corners="0,15,15,0">
+        <tweenShow tint="0xffffff" alpha="0.2" x="0" y="0"/>
+        <tweenOver tint="0xffffff" alpha="0.9"/>
+        <tweenHide tint="0xffffff" alpha="0"/>
+      </background>
+      <symbol type="2" align_pos="MC" x="0" y="0">
+        <tweenShow alpha="1" scaleX="0.3" scaleY="0.3" tint="0xe44557"/>
+        <tweenOver tint="0xe44557" scaleX="0.4" scaleY="0.4" alpha="1" x="0" y="0"/>
+        <tweenHide tint="0x2185c5" scaleX="0.2" scaleY="0.2" alpha="0" x="0" y="0"/>
+      </symbol>
+    </next_button>
+  </controls>
+  <description align_pos="ML" x="0" y="-50" width="215" height="40">
+    <auto_hide time="3">true</auto_hide>
+    <hide_on_transition>true</hide_on_transition>
+    <bake_on_transition>false</bake_on_transition>
+    <background round_corners="0,0,0,0">
+      <tweenShow tint="0xe44557" alpha="1" x="0" y="0" scaleX="1" scaleY="1"/>
+      <tweenOver tint="0xae2205" alpha="1" x="0" y="0" scaleX="1" scaleY="1"/>
+      <tweenHide tint="0xce320a" alpha="1" x="-220" y="0" scaleX="1" scaleY="1"/>
+    </background>
+    <heading margin="6,7,5,5" text_size="22" x="5" y="5" width="90" text_leading="0" text_letterSpacing="0" font="Arial" text_align="right">
+      <tweenShow tint="0xFFFFFF"/>
+      <tweenOver tint="0xFFFFFF"/>
+      <tweenHide tint="0xFFFFFF"/>
+    </heading>
+    <paragraph margin="0,5,5,5" text_size="12" text_leading="0">
+      <tweenShow tint="0xFFFFFF"/>
+      <tweenOver tint="0xFFFFFF"/>
+      <tweenHide tint="0xFFFFFF"/>
+    </paragraph>
+  </description>
+  <thumbnails align_pos="BL" x="16" y="-12" width="275.6" height="31" scroll="vertical" padding_x="0" padding_y="0">
+    <auto_hide time="3">false</auto_hide>
+    <hide_on_transition>false</hide_on_transition>
+    <background color="0x333333" alpha="0" round_corners="0,0,0,0"/>
+    <thumb width="30" height="30" spacing_x="3" spacing_y="0">
+      <background round_corners="0,0,0,0">
+        <tweenShow tint="0xffffff" alpha="0.2"/>
+        <tweenOver tint="0xffffff" alpha="0.9" x="0" y="0"/>
+        <tweenHide tint="0xFFFFFF" alpha="0"/>
+        <tweenSelected tint="0xe44557" alpha="1"/>
+      </background>
+      <title x="1" y="4" width="30" height="30" text_align="center" text_size="13" use_numbering_separator="" use_numbering="true" font="Tahoma" text_letterSpacing="0" text_leading="0">
+        <tweenShow tint="0xe44557" x="0" y="0" alpha="1"/>
+        <tweenOver tint="0xe44557" alpha="1"/>
+        <tweenHide tint="0xFFFFFF"/>
+        <tweenSelected tint="0xffffff" alpha="1"/>
+      </title>
+    </thumb>
+  </thumbnails>
+  <defaults>
+    <slide time="5" color="0x000000">
+      <image align_pos="MC" x="0" y="0" scaleX="1" scaleY="1"/>
+      <link target="_blank"/>
+      <description>
+        <link target="_blank"/>
+      </description>
+    </slide>
+    <transition type="3D" columns="5" rows="1" type2D="slide" flipAngle="180" flipOrder="315" flipShader="none" flipOrderFromCenter="false" flipDirection="up,left,right,down" flipColor="0x2b1601" flipBoxDepth="20" flipDepth="250" flipEasing="Sine.easeOut" flipDuration="0.8" flipDelay="0.2"/>
+  </defaults>
+  <slides width="963" height="403" align_pos="TL" x="0" y="-50" corner_TL="55.304,61.45" corner_TR="901.651,61.45" corner_BL="55.304,343.565" corner_BR="901.651,343.565">
+    <slide>
+      <url><![CDATA[8_abs.jpg]]></url>
+      <link target="_self"/>
+      <description>
+        <heading><![CDATA[Unique.]]></heading>
+      </description>
+      <image x="0" y="0" scaleX="1.07" scaleY="1" align_pos="MC"/>
+    </slide>
+    <transition rows="3" columns="5" flipDirection="up,left,right,down" flipColor="0x2b1601" flipShader="none"/>
+    <slide>
+      <url><![CDATA[2_abs.jpg]]></url>
+      <link target="_blank"/>
+      <description>
+        <heading><![CDATA[Awesome.]]></heading>
+      </description>
+      <image x="0" y="0" scaleX="1.08" scaleY="1" align_pos="MC"/>
+    </slide>
+    <transition flipOrder="0" flipOrderFromCenter="true" flipDirection="up"/>
+    <slide>
+      <url><![CDATA[9_abs.jpg]]></url>
+      <link target="_blank"/>
+      <description>
+        <heading><![CDATA[Cool.]]></heading>
+      </description>
+      <image x="0" y="0" scaleX="1.08" scaleY="1" align_pos="MC"/>
+    </slide>
+    <transition/>
+    <slide>
+      <url><![CDATA[7_abs.jpg]]></url>
+      <link target="_blank"/>
+      <description>
+        <heading><![CDATA[Customizable.]]></heading>
+      </description>
+      <image x="0" y="0" scaleX="1.07" scaleY="1" align_pos="MC"/>
+    </slide>
+    <transition flipDirection="up,down" rows="5" columns="1"/>
+    <slide>
+      <url><![CDATA[10_abs.jpg]]></url>
+      <link target="_blank"/>
+      <description>
+        <heading><![CDATA[Easy.]]></heading>
+      </description>
+      <image x="0" y="0" scaleX="1.07" scaleY="1" align_pos="MC"/>
+    </slide>
+    <transition/>
+    <slide>
+      <url><![CDATA[11_abs.jpg]]></url>
+      <link target="_blank"/>
+      <description>
+        <heading><![CDATA[Wanna play?]]></heading>
+      </description>
+      <image x="0" y="0" scaleX="1.09" scaleY="1" align_pos="MC"/>
+    </slide>
+    <transition/>
+  </slides>
+</data>

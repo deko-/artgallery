@@ -11,7 +11,7 @@
 			<%= form.check_box "remove_#{field.name}" %>
 			<%= form.label "remove_#{field.name}", "Remove existing #{field.label.downcase}", :class => "inline" %>
 		</div>
-	<% end%>
+	<% end %>
 	<div class="row">
 		<%= form.file_field field.name, :class => "fileUploadField #{field.has_errors? ? "errorField" : nil}" %>
 		<%= form.hidden_field "#{field.name}_cache" %>

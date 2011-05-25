@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  require 'garb'
+  #require 'garb'
   #google analytics
   #consumer = OAuth::Consumer.new('anonymous', 'anonymous', {
   #  :site => 'https://www.google.com',
@@ -11,9 +11,9 @@ class PagesController < ApplicationController
   #request_token = consumer.get_request_token({}, {:scope => 'https://www.google.com/analytics/feeds'})
   #access_token = request_token.get_access_token(:oauth_verifier => 'paste code from google here')
   #Garb::Session.access_token = access_token
-  path = RAILS_ROOT
-  CA_CERT_FILE = "cacert.pem"
-  Garb::Session.login('eoy@manaflask.com', 'sandboxcontemporary', :secure => false, :account_type => "GOOGLE")
+  #path = RAILS_ROOT
+  #CA_CERT_FILE = "cacert.pem"
+  #Garb::Session.login('eoy@manaflask.com', 'sandboxcontemporary', :secure => false, :account_type => "GOOGLE")
 
   def home
   	@title = "Home"

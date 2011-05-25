@@ -1,0 +1,540 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Embed Example</title>
+<script type="text/javascript">
+function changeMe(element) {
+	var tabs = new Array();
+	var tabs1 = document.getElementsByTagName('a');
+	for(var j=0, z=0; j<tabs1.length; j++) {
+		if(tabs1[j].className == 'tabmenu') {
+			tabs[z] = tabs1[j];
+			z++;
+		}
+	}
+	var el = element.href.split('#')[1];
+	for(var i=0; i<tabs.length; i++) {
+		for(var a=0; a<tabs.length; a++) {
+			var hr = tabs[a].href.split('#')[1];
+			if(hr != el) {
+				var el1 = document.getElementById(hr);
+				el1.style.display = 'none';
+				tabs[a].parentNode.className = '';
+			}
+		}
+	}
+	document.getElementById(el).style.display = 'block';
+	element.parentNode.className = 'active';
+	return false;
+}
+</script>
+
+<style type="text/css">
+<!--
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent
+}
+body {
+	line-height:1;
+	background-color: #f2f2f2;
+	font:12px/1.6 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; /**/
+	color: #454545;
+}
+ol, ul { list-style-position:inside; }
+#content {
+	margin:0 auto;
+	width:960px;
+}
+.box, #tabs li{
+	border: solid 1px #d1d1d1;
+}
+	
+.box {
+	padding:30px;
+	margin-bottom:30px;
+	background-color:#fff;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;	
+	box-shadow: 0px 1px 7px #d4d4d4;
+	-moz-box-shadow: 0px 1px 7px #d4d4d4;
+	-webkit-box-shadow: 0px 1px 7px #d4d4d4;
+	clear: both;
+}
+.box-transp {
+	clear: both;
+	padding:30px;
+	margin-bottom:30px;
+}
+.box.first {
+-webkit-border-top-right-radius: 0px;
+-webkit-border-top-left-radius: 0px;
+-moz-border-radius-topright: 0px;
+-moz-border-radius-topleft: 0px;
+border-top-right-radius: 0px;
+border-top-left-radius: 0px;
+margin-top:0;
+	}
+.header { padding:10px 30px; float:left; width:900px;}
+.header a { margin-left:20px; font-weight:bold; }
+#joomla, #wordpress, #other {display:none;}
+
+a.error, a.error:visited {color:#F30; margin-left:20px; font-size:11px; }
+a.error:hover {color:#F30;}
+
+.header p {margin-bottom:0}
+.header p:first-child {float:left}
+.header p:last-child {float:right}
+
+.box div {
+	padding:4px 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+a, a:visited {
+	color:#2185c5;
+	text-decoration: underline;
+}
+a:hover {
+	color:#44A2DF;
+	text-decoration: none;
+}
+p, ul, ol { margin-bottom:10px; }
+ul, ol { margin-left:10px; }
+h1 { font-size:30px; }
+h2 {
+	font-size:24px;
+	margin-bottom:0px;
+}
+h3 {
+	margin-top:5px;
+	font-size:16px;
+}
+h4 {
+	margin-bottom:10px;
+	margin-top:30px
+}
+h4 span {
+	color:#C00;
+	font-size:16px;
+	vertical-align:middle;
+}
+hr {margin:20px 0;}
+small { font-size:10px; }
+#wrapper { padding:10px 30px 30px; }
+.top h3 { line-height:30px; }
+.top div:hover { background-color:#ffffff; }
+.date {
+	color:#999;
+	margin-bottom:0;
+	font-size:11px;
+}
+#CU3ER-containter {
+	text-align: center;
+	margin: 10px auto 40px;
+	clear:both;
+}
+.box .codebox {
+	border:dashed 1px #CCC;
+	padding:15px 25px;
+	background-color:#F4FBFF;
+}
+
+.box .note {background-color:#FCF6C5; padding:10px 25px; border:solid 1px #FC0; margin-top:30px}
+
+ul li li { list-style-type:none; }
+#tabs {*margin-bottom:-40px; }
+#tabs ul {margin-left:0; margin-bottom:0;}
+#tabs li {
+	display: block;
+	list-style: none;
+	float: left;
+	background-color: #F8F8F8;
+	font-size: 14px;
+	font-weight: bold;	
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-topleft: 8px;
+	-moz-border-radius-topright: 8px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	margin-right:-1px;
+	margin-bottom:-1px;
+	margin-top:8px;
+}
+#tabs li.active{
+	background-color: #fff;
+	box-shadow: 0px -3px 5px #d4d4d4;
+	-moz-box-shadow: 0px -3px 5px #d4d4d4;
+	-webkit-box-shadow: 0px -3px 5px #d4d4d4;
+	margin-top:0;
+	border-bottom:solid 1px #fff;
+	
+}
+
+#tabs li a {display:block; width:197px; padding:12px 0 12px 42px;}
+#tabs li.active a {
+	padding:16px 0 16px 42px;
+	color:#666;
+	text-decoration: none;
+	cursor:pointer;
+	width:196px;
+}
+.destinations th, .destinations td {
+	text-align:left;
+	padding: 8px 4px 8px 20px;
+	border-bottom:solid 1px #fff;
+}
+.destinations td {
+	font-weight:bold;
+}
+.destinations th[scope=col] {
+	border-right:solid 1px #fff;
+	font-weight:normal;
+}
+.destinations th.head {
+	background-color:#c6e7f9;	
+	font-weight:bold; !important
+}
+.destinations th.head span {
+	font-weight:normal;
+	font-style:italic;
+	color:#C00;
+}
+-->
+</style>
+
+
+
+
+</head>
+<body>
+<div id="wrapper">
+	<div id="content">
+		<div class="box header">
+		<p>Congratulations, this is your <strong>New Project</strong> CU3ER! <a href="#security-settings" class="error">Can't see CU3ER? ‎</a></p>
+		<p><a href="#embed">How	to embed this CU3ER?</a> <a href="#faq">FAQ</a> <a href="#help">Help</a></p>
+	    </div>
+		<div id="CU3ER-containter">
+			<!-- CU3ER content HTML part starts here   -->
+				<div id="CU3ER">
+					<!-- modify this content to provide users without Flash or enabled Javascript 
+					   with alternative content information -->
+					<p>
+					Click to get Flash Player<br />
+					<a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a>
+					</p>
+					<p>
+					or try to enable JavaScript and reload the page
+					</p>
+				</div>
+			<!-- CU3ER content HTML part ends here   -->
+			
+			<!-- CU3ER content JavaScript part starts here   -->
+				<script type="text/javascript" src="js/swfobject.js"></script>
+				<script type="text/javascript" src="js/CU3ER.js"></script>
+				<script type="text/javascript">
+				// add your FlashVars
+				var vars = { xml_location : 'CU3ER-config.xml' };
+				// add Flash embedding parameters, etc. wmode, bgcolor...
+				var params = { wmode: 'transparent' };
+				// Flash object attributes id and name
+				var attributes = { id:'CU3ER', name:'CU3ER' };
+				// dynamic embed of Flash, set the location of expressInstall if needed
+				swfobject.embedSWF('CU3ER.swf', "CU3ER", 960, 350, "10.0.0", 
+				"js/expressinstall.swf", vars, params, attributes );
+				// initialize CU3ER class containing Javascript controls and events for CU3ER
+				var CU3ER_object = new CU3ER("CU3ER");
+				</script>
+			<!-- CU3ER content JavaScript part ends here   -->
+		</div>
+
+		<a name="embed" id="embed"></a>
+		
+	<div id="tabs">
+		<ul>
+			<li class="active"><a href="#webpage" class="tabmenu" onclick="return changeMe(this);">Webpage</a></li>
+			<li><a href="#joomla" class="tabmenu" onclick="return changeMe(this);">Joomla</a></li>
+			<li><a href="#wordpress" class="tabmenu" onclick="return changeMe(this);">Wordpress</a></li>
+			<li><a href="#other" class="tabmenu" onclick="return changeMe(this);">Other...</a></li>
+		</ul>
+	</div>
+		
+	<div class="box first">
+		<div id="webpage">
+			<h2>Embed this CU3ER to your webpage.</h2>
+			
+			Simply follow <span style="color:#C00;"> three basic steps</span> described
+			below.
+			</p>
+			<h4><span>Step 1→</span> Upload your files to server. </h4>
+			<div class="codebox">
+				<table class="destinations" width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<th scope="col" class="head">File/folder</th>
+						<th scope="col" class="head">Target Destination <span></span></th>
+					</tr>
+					<tr>
+						<th width="23%" scope="col">CU3ER.swf</th>
+						<td width="77%">http://yourdomain.com/CU3ER.swf
+						</th></td>
+					</tr>
+					<tr>
+						<th scope="col">Configuration XML file</th>
+						<td>http://yourdomain.com/CU3ER-config.xml</th></td>
+					</tr>
+					<tr>
+						<th scope="col">&quot;js&quot; folder</th>
+						<td>http://yourdomain.com/js</td>
+					</tr>
+					<tr>
+						<th scope="col">&quot;images&quot; folder</th>
+						<td>http://yourdomain.com/images</td>
+					</tr>
+					<tr>
+						<th scope="col">&quot;fonts&quot; folder</th>
+						<td>http://yourdomain.com/fonts</td>
+					</tr>
+				</table>
+			</div>
+			<h4><span>Step 2→</span> Open your article/section and insert following in HTML Source editor:</h4>
+			<div class="codebox"> <code>
+
+<pre>
+&lt;div id=&quot;CU3ER&quot;&gt;  		  
+&lt;!-- modify this content to provide users without Flash or enabled Javascript with alternative content information --&gt;  		
+&lt;p&gt;Click to get Flash Player&lt;br /&gt;
+&lt;a href=&quot;<a href="view-source:http://www.adobe.com/go/getflashplayer">http://www.adobe.com/go/getflashplayer</a>&quot;&gt;
+&lt;img src=&quot;<a href="view-source:http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif">http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif</a>&quot; alt=&quot;Get Adobe Flash player&quot; /&gt;
+&lt;/a&gt;
+&lt;/p&gt;  		  
+&lt;p&gt;or try to enable JavaScript and reload the page&lt;/p&gt;
+&lt;/div&gt;		
+		
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/swfobject.js&quot;&gt;&lt;/script&gt;<br />&lt;script type=&quot;text/javascript&quot; src=&quot;js/CU3ER.js&quot;&gt;&lt;/script&gt;<br />&lt;script type=&quot;text/javascript&quot;&gt;<br />// add your FlashVars<br />var vars = { xml_location : 'CU3ER-config.xml' };<br />// add Flash embedding parameters, etc. wmode, bgcolor...<br />var params = { wmode: 'transparent' };<br />// Flash object attributes id and name<br />var attributes = { id:'CU3ER', name:'CU3ER' };<br />// dynamic embed of Flash, set the location of expressInstall if needed<br />swfobject.embedSWF('CU3ER.swf', &quot;CU3ER&quot;, 960, 350, &quot;10.0.0&quot;, 
+&quot;js/expressinstall.swf&quot;, vars, params, attributes );<br />// initialize CU3ER class containing Javascript controls and events for CU3ER<br />var CU3ER_object = new CU3ER(&quot;CU3ER&quot;);<br />&lt;/script&gt;
+</pre>
+				</code> </div>
+			<h4><span>Step 3→</span> Upload your page to server and you are done! </h4>
+		 
+			</div> <!--end of webpage embedding-->
+			
+			
+			<div id="joomla">
+			<h2>Embed this CU3ER to Joomla.</h2>
+			
+			Simply follow <span style="color:#C00;"> four basic steps</span> described below.
+			</p>
+			<h4><span>Step 1→</span> Upload your files to server. </h4>
+			<div class="codebox">
+				<table class="destinations" width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<th scope="col" class="head">File/folder</th>
+						<th scope="col" class="head">Target Destination</th>
+					</tr>
+					<tr>
+						<th width="23%" scope="col">CU3ER.swf</th>
+						<td width="77%">http://yourdomain.com/CU3ER.swf
+							</th></td>
+					</tr>
+					<tr>
+						<th scope="col">Configuration XML file</th>
+						<td>http://yourdomain.com/CU3ER-config.xml
+							</th></td>
+					</tr>
+					<tr>
+						<th scope="col">&quot;js&quot; folder</th>
+						<td>http://yourdomain.com/js</td>
+					</tr>
+					<tr>
+						<th scope="col">&quot;images&quot; folder</th>
+						<td>http://yourdomain.com/images</td>
+					</tr>
+					<tr>
+						<th scope="col">&quot;fonts&quot; folder</th>
+						<td>http://yourdomain.com/fonts</td>
+					</tr>
+				</table>
+			</div>
+			<h4><span>Step 2→</span> Open your article/section and insert following code
+				in HTML Source editor:</h4>
+			<div class="codebox"> <code>
+
+<pre>
+&lt;div id=&quot;CU3ER&quot;&gt;  		  
+&lt;!-- modify this content to provide users without Flash or enabled Javascript with alternative content information --&gt;  		
+&lt;p&gt;Click to get Flash Player&lt;br /&gt;
+&lt;a href=&quot;<a href="view-source:http://www.adobe.com/go/getflashplayer">http://www.adobe.com/go/getflashplayer</a>&quot;&gt;
+&lt;img src=&quot;<a href="view-source:http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif">http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif</a>&quot; alt=&quot;Get Adobe Flash player&quot; /&gt;
+&lt;/a&gt;
+&lt;/p&gt;  		  
+&lt;p&gt;or try to enable JavaScript and reload the page&lt;/p&gt;
+&lt;/div&gt;		
+		
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/swfobject.js&quot;&gt;&lt;/script&gt;<br />&lt;script type=&quot;text/javascript&quot; src=&quot;js/CU3ER.js&quot;&gt;&lt;/script&gt;<br />&lt;script type=&quot;text/javascript&quot;&gt;<br />// add your FlashVars<br />var vars = { xml_location : 'CU3ER-config.xml' };<br />// add Flash embedding parameters, etc. wmode, bgcolor...<br />var params = { wmode: 'transparent' };<br />// Flash object attributes id and name<br />var attributes = { id:'CU3ER', name:'CU3ER' };<br />// dynamic embed of Flash, set the location of expressInstall if needed<br />swfobject.embedSWF('CU3ER.swf', &quot;CU3ER&quot;, 960, 350, &quot;10.0.0&quot;, 
+&quot;js/expressinstall.swf&quot;, vars, params, attributes );<br />// initialize CU3ER class containing Javascript controls and events for CU3ER<br />var CU3ER_object = new CU3ER(&quot;CU3ER&quot;);<br />&lt;/script&gt;
+</pre>
+				</code> </div>
+			
+			<h4><span>Step 3→</span> Click on &quot;Update&quot; button   to close HTML Source panel  </h4>
+			<h4><span>Step 4→</span> Click on the &quot;Save&quot; or &quot;Apply&quot; button in top right
+				corner to save article/section.  </h4>
+			<h4><span>Step 5→</span> That's it... Preview your page!  </h4>
+			
+			<div class="note">For more details please check out <a href="http://support.getcu3er.com/entries/342576-guide-on-how-to-embed-cu3er-in-joomla">guide
+				on how to embedd CU3ER to Joomla!</a></div>
+			</div>
+ 
+			
+				
+
+			
+			
+			<div id="wordpress">
+						<h2>Embed this CU3ER to Wordpress</h2>
+			
+			
+				This is a quick overview of how to insert CU3ER to WordPress. For more detailed
+				please check ....<br/>
+				Simply follow <span style="color:#C00;"> four basic steps</span> described below.
+					
+			<h4><span>Step 1→</span> Install wpCU3ER plugin</h4>
+			<div class="codebox">
+			Installing wpCU3ER is the same as installing almost any other WordPress
+			plugin. Please check <a href="http://docs.getcu3er.com/wpcu3er/install">installing
+			wpCU3ER</a> for more info.
+			</div>
+			
+			<h4><span>Step 2→</span> Import project .zip or .xml to wpCU3ER </h4>
+			<div class="codebox">
+You can add (import) as many CU3ER projects as you like and each one is processed
+through '<a href="http://docs.getcu3er.com/wpcu3er/add-new">Add New</a>' page.
+For more info about importing CU3ER project please check <a href="http://docs.getcu3er.com/wpcu3er/add-new">related
+documentation</a>.
+			</div>
+			<h4><span>Step 3→</span> Embed CU3ER on WP page or post </h4>
+			<div class="codebox">
+Embedding CU3ER in post or page is simply done either through (1) TinyMCE — default WP rich text formatting editor or (2) Template Tag — display_cu3er('slider_ID'); Please check <a href="http://docs.getcu3er.com/wpcu3er/embed">embedding CU3ER with wpCU3ER</a> for more details. </div>
+			<h4><span>Step 4→</span> Publish &amp; Enjoy</h4>
+			<div class="codebox">
+Once you have emebedded CU3ER all you need to do is to save your page/post and you are done.
+			</div>
+
+			</div>
+		
+			
+			<div id="other">
+			<h2>Using CU3ER in other enviroments</h2>
+			<p>
+			Please check following articles about using &amp; embedding CU3ER with other
+			enviroments:
+			</p>
+			<ul>
+				<li><a href="http://support.getcu3er.com/entries/337353-guide-on-how-to-embed-cu3er-in-iweb">Guide on how to embed <strong>CU3ER in iWeb</strong></a></li>
+				<li><a href="http://support.getcu3er.com/entries/337421-guide-on-how-to-embed-cu3er-in-rapidweaver">Guide on how to embed <strong>CU3ER in RapidWeaver</strong></a></li>
+				<li><a href="http://support.getcu3er.com/entries/342576-guide-on-how-to-embed-cu3er-in-joomla">Guide on how to embed <strong>CU3ER in Joomla</strong></a></li>
+				<li><a href="http://support.getcu3er.com/entries/361982-guide-on-how-to-embed-cu3er-in-adobe-flash-catalyst">Guide on how to embed <strong>CU3ER in Adobe Flash Catalyst</strong></a></li>
+				<li><a href="http://support.getcu3er.com/entries/297193-using-cu3er-in-your-flash-flex-projects-cu3er-as3-api">Using <strong>CU3ER
+					in your Flash/Flex projects</strong> - CU3ER AS3 API</a></li>
+			</ul>
+			</div>
+			
+			
+		</div>
+				
+
+		<a name="faq" id="faq"></a>
+		<div class="box">
+			
+			<div>
+			<h2>Frequently Asked Questions</h2>
+			<hr size="1" noshade="noshade" color="#CCCCCC" />
+			<h3 id="security-settings">Why I can't see CU3ER on this page?</h3>	
+			<p class="">
+				Your flash security settings prevent displaying flash content on this location. Please adjust security settings as follow:
+			</p>
+			<ul>
+				<li>Visit <a href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04.html">http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04.html</a></li>
+				<li>Click on "Edit locations -> add location"</li>
+				<li>Click on "Browse for folder..." and mark folder where you have extracted your CU3ER free zip package</li>
+				<li>That's it. Reload your embed_example.html and preview CU3ER.</li>
+			</ul>
+			<h3>I'm a PRO user but CU3ER logo is still present. Why?</h3>	
+			<p class="">
+Please note if you play CU3ER locally or under your testing environment (not
+under assigned domain) CU3ER branding will be present. Once you upload CU3ER
+and related files to licensed domain branding will be removed according to settings
+you made in cManager..
+			</p>
+			
+<div class="note">Looking for something else? Please check <strong><a href="http://support.getcu3er.com/categories/2759-frequently-asked-questions">complete
+		FAQ section</a></strong> on support froum.</div>
+			</div>
+		</div>
+		
+		<a name="help" id="help"></a>
+		<div class="box">
+			<div>
+				<h2>Help</h2>
+				<h3>Documentation</h3>
+				<p>
+				Extensive documentation is provided for your convenience as an
+				official guide through CU3ER and cManager features, settings and available
+				options.
+				</p>
+				<ul>
+					<li><strong><a href="http://docs.getcu3er.com/cu3er/">All about CU3ER</a></strong> </li>
+					<li><a href="http://docs.getcu3er.com/account/"><strong>Account</strong></a></li>
+					<li><a href="http://docs.getcu3er.com/cmanager/"><strong>Working with cManager</strong></a></li>
+					<li><a href="http://docs.getcu3er.com/xml/"><strong>XML Reference</strong></a></li>
+				</ul>			
+			</div>
+			<hr size="1" noshade="noshade" color="#CCCCCC" />
+			<div>
+				<h3>Support Forums</h3>
+				<p>
+				<a href="http://support.getcu3er.com/forums">Support forums</a> are a perfect
+				way to get help from other CU3ER users or to share your knowledge by helping
+				someone else. Start by searching for your answer <a href="http://support.getcu3er.com/forums">now</a>.
+				</p>
+				<ul>
+				  <li><a href="http://support.getcu3er.com/categories/2856-help-from-the-community"><strong>Help
+								from the Community</strong></a>
+					  <ul>
+						  <li><a href="http://support.getcu3er.com/forums/197884-cu3er">CU3ER</a> | <a href="http://support.getcu3er.com/forums/197885-cmanager">cManager</a></li>
+					  </ul>
+					</li>
+					<li><a href="http://support.getcu3er.com/categories/2759-frequently-asked-questions"><strong>Frequently
+								Asked Questions</strong></a>
+						<ul>
+							<li><a href="http://support.getcu3er.com/forums/223943-cu3er-faq">CU3ER
+									FAQ</a> | <a href="http://support.getcu3er.com/forums/223990-cmanager-faq">cManager
+									FAQ</a> | <a href="http://support.getcu3er.com/forums/223988-pro-account-faq">Account FAQ</a> | <a href="http://support.getcu3er.com/forums/223787-licensing-faq">Licensing
+									FAQ</a></li>
+						</ul>
+					</li>
+					<li><a href="http://support.getcu3er.com/forums/197886-feature-request"><strong>Feature
+								Request</strong></a></li>
+				</ul>
+			</div>
+			
+		</div>
+		<div>
+			<p>
+			<small>Copyright 2011 <a href="http://madebyplay.com">MADEBYPLAY</a>. All
+			rights reserved.</small>
+			</p>
+		</div>
+</div>
+</div>
+</body>
+</html>

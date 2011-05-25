@@ -1,10 +1,65 @@
-<div class="animation_box">
+<div class="animation_box_rename_me" style="text-align: right; margin-bottom: 5px; display: block; clear: both;">
 				<% if @artworks.first %>
-					<%= image_tag @artworks.first.image_url, :class => "" %>
+					<%#= image_tag @artworks.first.image_url, :class => "" %>
+<div id="CU3ER">  		  
+<!-- modify this content to provide users without Flash or enabled Javascript with alternative content information -->  		
+<p>Click to get Flash Player<br />
+<a href="http://www.adobe.com/go/getflashplayer">
+<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+</a>
+</p>  		  
+<p>or try to enable JavaScript and reload the page</p>
+</div>		
+		
+<script type="text/javascript" src="js/swfobject.js"></script>
+<script type="text/javascript" src="js/CU3ER.js"></script>
+<script type="text/javascript">
+// add your FlashVars
+var vars = { xml_location : 'CU3ER-config.xml' };
+// add Flash embedding parameters, etc. wmode, bgcolor...
+var params = { wmode: 'transparent' };
+// Flash object attributes id and name
+var attributes = { id:'CU3ER', name:'CU3ER' };
+// dynamic embed of Flash, set the location of expressInstall if needed
+swfobject.embedSWF('CU3ER.swf', "CU3ER", 960, 400, "10.0.0", 
+"js/expressinstall.swf", vars, params, attributes );
+// initialize CU3ER class containing Javascript controls and events for CU3ER
+var CU3ER_object = new CU3ER("CU3ER");
+</script>
+
+
 				<% else %>
-					<%= image_tag "/images/bosch.png", :title => "title", :class => "slide_image" %>
+				<div id="CU3ER">  		  
+<!-- modify this content to provide users without Flash or enabled Javascript with alternative content information -->  		
+<p>Click to get Flash Player<br />
+<a href="http://www.adobe.com/go/getflashplayer">
+<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+</a>
+</p>  		  
+<p>or try to enable JavaScript and reload the page</p>
+</div>		
+		
+<script type="text/javascript" src="js/swfobject.js"></script>
+<script type="text/javascript" src="js/CU3ER.js"></script>
+<script type="text/javascript">
+// add your FlashVars
+var vars = { xml_location : 'CU3ER-config.xml' };
+// add Flash embedding parameters, etc. wmode, bgcolor...
+var params = { wmode: 'transparent' };
+// Flash object attributes id and name
+var attributes = { id:'CU3ER', name:'CU3ER' };
+// dynamic embed of Flash, set the location of expressInstall if needed
+swfobject.embedSWF('CU3ER.swf', "CU3ER", 960, 400, "10.0.0", 
+"js/expressinstall.swf", vars, params, attributes );
+// initialize CU3ER class containing Javascript controls and events for CU3ER
+var CU3ER_object = new CU3ER("CU3ER");
+</script>
+					<%#= image_tag "/images/bosch.png", :title => "title", :class => "slide_image" %>
 				<% end %>	
 </div><!-- animation_box end -->
+
+
+<!-- 
 <div class="description">
 	<div class="name">
 		<h2>Hieronymus Bosch</h2>
@@ -18,3 +73,4 @@
 	</div>
 	
 </div>
+-->

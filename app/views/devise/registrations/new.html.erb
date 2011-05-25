@@ -1,4 +1,4 @@
-<h2>Sign up</h2>
+<h2 style="font-family: georgia;font-size: 18px;padding-bottom: 22px;text-shadow: 1px 1px #FFFFFF;">Sign up</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -11,8 +11,8 @@
 
   <p><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></p>
-
-  <p><%= f.submit "Sign up" %></p>
+<br />
+  <p><%= f.submit "Sign up", :class => "button grey" %></p>
 <% end %>
-
+<br />
 <%= render :partial => "devise/shared/links" %>

@@ -1,0 +1,91 @@
+CU3ER ChangeLog
+
+v1.22 | 25-March-2011
+--------------------------
+ * [player] fixed few bugs with description and bake on transition, hide on transition options
+ * [player] fixed bug with thumbnail scrolling slider
+
+v1.21 | 09-March-2011
+--------------------------
+ * [player] fixed bug with keyboard arrow support for skipping to next/previous slide
+
+v1.20 | 01-March-2011
+--------------------------
+ * [player] added shading color for slides in transition - flipShaderColor attribute on transition node
+ * [player] added support for reversing slides order on start with Flashvars or attribute of slides node
+ * [player] added support for pause on rollover
+
+v1.19 | 25-February-2011
+--------------------------
+ * [player] [custom image preloader] fixed preloader direction and reveling animation for up and down directions
+
+v1.18 | 24-February-2011
+--------------------------
+ * [player] [preloader] fixed bug with positioning using align to stage
+ * [player] fixed hide on transition not working for description
+ * [player] [flashvars] fixed problem with loading XML though Flashvars only
+
+v1.17 | 04-January-2011
+--------------------------
+ * [player] fixed auto play not working on slower connections due to preloading slides
+ * [player] fixed the bug with fonts if they had & or special chars in the font name
+
+v1.16 | 28-December-2010
+--------------------------
+ * [player] [thumb title] fixed setting thumb title text_bold attribute bug
+
+v1.15 | 23-December-2010
+--------------------------
+ * [player] [CU3ER.js] added onLoadComplete event and slidesOrder variable in CU3ER Javascript support
+
+v1.14 | 21-December-2010
+--------------------------
+ * [player] fixed bug with stage size in IE, caused by v1.13
+
+v1.13 | 15-December-2010
+--------------------------
+ * added support for forced SWF stage size loaded from XML
+
+v1.12 | 24-November-2010
+--------------------------
+ * [player] fixed the bug with swf preloading on some version of Firefox for Mac OSX
+
+v1.11 | 08-November-2010
+--------------------------
+ * [player] fixed the bug with description autohide, and tween delay for description background, heading and paragraph
+ * [player] fixed the bug with symbol align offset positioning, it was ignored and symbol was always positioned at 0,0
+ * [player] fixed the bug with license when using XML flashvar, instead of XML config file
+
+v1.11 | 24-October-2010
+-------------------------
+ * [player] added support for keyboard, next prev slide on arrow keys
+
+v1.1  | 07-October-2010
+-------------------------
+ * [player] changed 3D support to Flash Player 10, making CU3ER smoother on desktop and even more on mobile devices
+ * [player][image preloader] added support for image preloader on start screen
+
+v1.04 | 30-September-2010
+-------------------------
+ * [player][license] added support for multiple license nodes, so multiple (or masked) domains can hide branding
+
+
+v1.04 | 10-September-2010
+-------------------------
+ * [player] forced loading type for XML, so dynamically generated XML from script works better
+
+
+v1.03 | 22-August-2010
+-------------------------
+ * [player] [flashvars] added xml as a flashvar, string instead of XML path
+ * [player] nicer slide display when slide finishes transition, pixelPrecision 2px set
+
+
+v1.02 | 30-July-2010
+-------------------------
+ * [player] [CU3ER.js] changed play and pause callbacks to 'playCU3ER' and 'pauseCU3ER' to avoid errors in IE8
+
+
+v1.01 | 27-July-2010
+-------------------------
+ * added support for subdomains

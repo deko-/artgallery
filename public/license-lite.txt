@@ -1,0 +1,79 @@
+
+CU3ER LITE LICENSE AGREEMENT
+
+Please read this License carefully before using, downloading or installing CU3ER - 3D image slider ("CU3ER"). By using, downloading or installing CU3ER, You agree to become bound by this License and the license granted hereunder is subject to compliance with any and all terms of this License. IF YOU DO NOT ACCEPT THE TERMS AND CONDITIONS OF THIS LICENSE, DO NOT USE, DOWNLOAD OR INSTALL THE CU3ER.
+
+
+1. DEFINITIONS
+   1. "Adaptation" means a derivative work based upon the CU3ER resulting from any Adaptation or configuration of the CU3ER or any previous Adaptations.
+   2. "Commercial Website" means a website which purpose is generating revenue or cash flow of any type, and that isn't under a non-profit organization. If you're selling a product, selling advertisement, selling a service or just marketing a commercial business, your site is commercial. A company website is also commercial even if it doesn't sell anything, as it's purpose is to front a commercial company.
+   3. “CU3ER” means an 3D image slider component written in ActionScript 3.0 that can be embedded in a website, web service, desktop software or any Flash environment to show a sequence of images with 2D or 3D transitions, which is offered under the terms of this License.
+   4. “License” means this document.
+   5. "MADEBYPLAY" means MADEBYPLAY d.o.o
+   6. "Reproduce" means to make copies of the Licensed Programs.
+   7. "You" means an individual or entity exercising rights under and complying with the terms of this License who has not previously violated the terms of this License with respect to the CU3ER, or who has received express permission from the MADEBYPLAY to exercise rights under this License despite a previous violation.
+
+
+2. License Grant
+Subject to the terms and conditions of this License, MADEBYPLAY hereby grants You a non-exclusive, non-transferable license to use CU3ER to:
+    1. create and Reproduce Adaptations of the CU3ER;
+    2. use Adaptations in personal or commercial project as part of hired work for a third party;
+    3. access and use cManager application in order to create, modify and export CU3ER, Adaptations and related files;
+    4. seek and get community support trough available support system.
+
+All rights not expressly granted by MADEBYPLAY are hereby reserved.
+
+
+3. Restrictions.
+The license granted in Section 2 above is expressly made subject to and limited by the following restrictions:
+    1.You may deploy CU3ER as part of hired work for a third party as long as the CU3ER is unique to said party and not replicated / resold / redistributed as part of a template, application or service to additional parties.
+    2. CU3ER may not be integrated or embedded as part of a web site template, application, and/or web site where stated web site template, application, and/or web site is re-sold and/or re-distributed for independent use by more than one party.
+    3. You may not rent, lease, loan, encumber, resell, distribute or otherwise assign or transfer the CU3ER, or create derivative components based upon CU3ER or any part of it.
+    4. You may not distribute CU3ER in downloadable format or as part of software collection, web template, plug-in, module, extension created by You or by another individual or legal entity.
+    5. You may not decompile, reverse engineer, disassemble, or otherwise determine or attempt to determine source code for the executable code of CU3ER, and you may not permit or authorize anyone else to do so.
+
+
+
+4. Applicability of License
+The terms and conditions of this License will apply to any CU3ER 1.x updates, which includes any versions numbered between 1.00 and 1.99 provided to you at MADEBYPLAY's discretion, that replace and / or supplement the original CU3ER, unless such update contains a separate license. This License does not cover any previous 'zero' versions of the CU3ER, which includes any versions numbered between 0.9.0 and 0.9.9, all of which are subject to other license agreement.
+
+
+5. Intellectual Property
+The copy of CU3ER provided to You under this License is licensed, not sold, to You by MADEBYPLAY. MADEBYPLAY reserves all rights not expressly granted. This License does not transfer from MADEBYPLAY to You any MADEBYPLAY or third party intellectual property, and all right, title and interest in and to such property will remain (as between the parties) solely with MADEBYPLAY. MADEBYPLAY, CU3ER, getcu3er.com, the CU3ER logo, and all other trademarks, service marks, graphics and logos used in connection with CU3ER are trademarks or registered trademarks of MADEBYPLAY or MADEBYPLAY’s licensors. Other trademarks, service marks, graphics and logos used in connection with the CU3ER may be the trademarks of other third parties. Your use of the CU3ER grants You no right or license to reproduce or otherwise use any MADEBYPLAY or third-party trademarks.
+
+
+6. Effective Date
+The rights and License granted hereunder shall commence on the date the CU3ER account is created by You or by MADEBYPLAY representatives on behalf of You. MADEBYPLAY agrees to make the CU3ER available for electronic delivery to You promptly after You create free account on http://getcu3er.com.
+
+
+7. Termination of License
+MADEBYPLAY reserves the right to terminate, temporarily or permanently suspend, this License at any time if:
+
+    1. You breach any of the terms of this License
+    2. MADEBYPLAY has a reasonable basis to believe that You are not abiding by the spirit of this License
+    3. MADEBYPLAY believes that Yours business is impairing MADEBYPLAY’s business
+
+Upon termination of this License for any reason, You shall immediately cease using the CU3ER and return any copies of the CU3ER to MADEBYPLAY or certify to MADEBYPLAY that it has destroyed all copies of the CU3ER and Adaptations.
+
+Any suspected fraudulent, abusive, or illegal activity that may be grounds for termination of Your License, may be referred to appropriate law enforcement authorities.
+
+
+8. Warranty
+UNLESS OTHERWISE MUTUALLY AGREED BY THE PARTIES IN WRITING, MADEBYPLAY OFFERS THE CU3ER AS-IS AND MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND EITHER EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING, WITHOUT LIMITATION, WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR THE ABSENCE OF LATENT OR OTHER DEFECTS, ACCURACY, OR THE PRESENCE OF ABSENCE OF ERRORS, WHETHER OR NOT DISCOVERABLE.
+
+
+9. Limitation of Liability
+EXCEPT TO THE EXTENT REQUIRED BY APPLICABLE LAW, IN NO EVENT WILL MADEBYPLAY BE LIABLE TO YOU ON ANY LEGAL THEORY FOR ANY SPECIAL, INCIDENTAL, CONSEQUENTIAL, PUNITIVE OR EXEMPLARY DAMAGES ARISING OUT OF THIS LICENSE OR THE USE OF THE WORK, EVEN IF MADEBYPLAY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+
+10. Indemnity
+You agree to indemnify and hold harmless MADEBYPLAY, their respective directors, officers, and employees from and against any and all claims and expenses, including attorneys fees, arising out of Yours use of the CU3ER, including but not limited to Your violation of this License.
+
+
+11. GOVERNING LAW AND JURISDICTION
+This License shall be governed by and interpreted in accordance with the laws of Serbia. Any and all legal actions relative hereto shall be in the courts of Novi Sad, Serbia.
+
+
+12. Complete Agreement
+This License constitutes the entire agreement between MADEBYPLAY and You with respect to the use of the CU3ER and supersedes all prior or contemporaneous understandings or agreements, written or oral, regarding such subject matter. This License may only be modified by a written amendment signed by an authorized executive of MADEBYPLAY, or by the posting by MADEBYPLAY of a revised version.
+
