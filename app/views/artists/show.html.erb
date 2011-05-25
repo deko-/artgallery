@@ -2,12 +2,12 @@
 
 <p>
   <b>Artist:</b>
-  <%= @artist.artist_id %>
+  <%= @artist.id %>
 </p>
 
 <p>
-  <b>User:</b>
-  <%= @artist.user_id %>
+  <b>Name:</b>
+  <%= @artist.name %>
 </p>
 
 <p>
@@ -15,6 +15,12 @@
   <%= @artist.biography %>
 </p>
 
+<p>
+  <b>Artwork Count:</b>
+  <%= @artist.artwork_count %>
+</p>
+
+<%= render :partial => 'artworks/thumbnails' %>
 
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>

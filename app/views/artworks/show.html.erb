@@ -15,7 +15,7 @@
 <div class="description">
 	<div class="name">
 		<h2><%= @artwork.name %></h2>
-		<span>by <%= link_to @artwork.artist.user.name, artist_path(@artwork.artist), :class => "author" %></span>
+		<span>by <%= link_to @artwork.artist.name, artist_path(@artwork.artist), :class => "author" %></span>
 	</div>
 	<div class="price">
 		<span>own it for <a href="#">450<b>€</b></a></span>
