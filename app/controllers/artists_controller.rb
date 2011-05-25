@@ -15,6 +15,7 @@ class ArtistsController < ApplicationController
   # GET /artists/1.xml
   def show
     @artist = Artist.find(params[:id])
+    @artworks = Artwork.where("artist_id = #{params[:id]}")
 
     respond_to do |format|
       format.html # show.html.erb
@@ -26,6 +27,7 @@ class ArtistsController < ApplicationController
   # GET /artists/new.xml
   def new
     @artist = Artist.new
+    @user = User.where("is_artist IS NULL")
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,13 +38,19 @@ class ArtistsController < ApplicationController
   # GET /artists/1/edit
   def edit
     @artist = Artist.find(params[:id])
+    @user = User.where("is_artist IS NULL")
   end
 
   # POST /artists
   # POST /artists.xml
   def create
     @artist = Artist.new(params[:artist])
-
+    unless params[:artist][:user_id].nil? || params[:artist][:user_id].empty?
+      @user = User.find(params[:artist][:user_id])
+      @user.is_artist = 1
+      @user.save
+    end
+    
     respond_to do |format|
       if @artist.save
         format.html { redirect_to(@artist, :notice => 'Artist was successfully created.') }
@@ -58,7 +66,16 @@ class ArtistsController < ApplicationController
   # PUT /artists/1.xml
   def update
     @artist = Artist.find(params[:id])
-
+    unless params[:artist][:user_id].nil? || params[:artist][:user_id].empty?
+      @user = User.find(params[:artist][:user_id])
+      @user.is_artist = 1
+      @user.save
+    else
+      @user = User.find(@artist.user_id)
+      @user.is_artist = nil
+      @user.save
+    end
+    
     respond_to do |format|
       if @artist.update_attributes(params[:artist])
         format.html { redirect_to(@artist, :notice => 'Artist was successfully updated.') }

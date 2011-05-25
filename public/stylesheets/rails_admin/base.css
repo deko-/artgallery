@@ -6,7 +6,7 @@
 }
 
 body{
-  background:#fff url(../../images/rails_admin/background.png) repeat-x;
+  background:#fff url(../../images/header_bg.jpg) repeat-x;
   font-family:Verdana, Geneva, sans-serif;
   font-size:12px;
 }
@@ -65,14 +65,12 @@ fieldset {
 }
 
 #header{
-	margin-bottom: 25px;
   font-size:10px;
-  color:#FFF;
-  height:120px;
+  height:50px;
 }
 
 #header a{
-  color:#666;
+  color:#fff;
 }
 
 ul.breadcrumb{
@@ -82,8 +80,8 @@ ul.breadcrumb{
 }
 
 ul.breadcrumb li{
-	margin-top:12px;
-	font-size: 200%;
+	margin-top:8px;
+	font-size: 11px;
 	text-transform: lowercase;
   float:left;
   margin-right:3px;
@@ -92,11 +90,12 @@ ul.breadcrumb li{
 
 ul.breadcrumb li a{
   text-decoration:none;
-	color:#999 !important;
+	color:#fff !important;
 }
 
 ul.breadcrumb li:last-child span {
-	color:#666 !important;
+	color:#fff !important;	
+	text-shadow: -1px -1px #701B1B; !important;
 }
 
 ul.breadcrumb li a:hover{
@@ -110,6 +109,9 @@ ul.breadcrumb li a:hover{
 
 .user_info img{
 	float:left;
+	max-width: 16px;
+	border: 1px solid #000;
+	margin-top: -2px;
 }
 
 .user_info ul{
@@ -119,6 +121,8 @@ ul.breadcrumb li a:hover{
 
 .user_info li{
 	font-size:90%;
+	float: left;
+	margin-left: 10px;
 	list-style-type:none;
 }
 
@@ -135,26 +139,34 @@ ul.breadcrumb li a:hover{
   float:left;
 }
 
-#headerLeft h1#logo{
-	margin-top:62px;
+h1#logo{
+  float:left;
+  padding-top:12px;
   font-weight:normal;
   font-size:22px;
+  width:64px;
 }
 
-#headerLeft h1#logo span.image_replacement{
+h1#logo span.image_replacement{
 	background-image:url(../../images/logo.png);
-	width:205px;
-	height:65px;
+	width:264px;
+	height:70px;
+        float: left;
 }
 
 #headerRight{
   float:right;
 }
 
+#header2{
+  font-size:10px;
+  height:88px;
+}
+
 #content {
   width:960px;
   background:#FFF;
-  margin-bottom: 20px;
+  margin: 20px 0;
   border-bottom: 1px solid #e6e6e6;
 }
 
@@ -211,9 +223,9 @@ input {
 }
 
 ul#nav{
-  float:left;
+  float:right;
   list-style-type:none;
-  margin-top:88px;
+  margin-top:76px;
   margin-left:20px;
 }
 
@@ -243,6 +255,7 @@ ul#nav{
 #nav li.active a{
 	border-bottom-color: #fff;
   background:#fff;
+	color: #701B1B !important;
 }
 
 #nav li a img{
@@ -266,6 +279,7 @@ ul#nav{
 
 ul#nav li.more:hover ul{
   display:block;
+	z-index:1;
 }
 
 ul#nav li.more ul{
@@ -283,12 +297,12 @@ ul#nav li.more ul li{
 }
 
 #nav li.more a{
-  background:url(../../images/rails_admin/navigation_more.png) no-repeat;
   display:block;
-  text-indent:-9999px;
 }
 
-ul#nav li.more a{
+ul#nav li.plus.more>a{
+  background:url(../../images/rails_admin/navigation_more.png) no-repeat;
+  text-indent:-9999px;
 	border: 1px solid #ededed;
   width:25px;
   height:31px;

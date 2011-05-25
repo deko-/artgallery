@@ -12,17 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :artist_id %><br />
-    <%= f.text_field :artist_id %>
-  </div>
-  <div class="field">
     <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
+    <%= f.collection_select(:user_id, @user, :id, :name, options={:include_blank => 'No User (virtual artist)'}) %>
   </div>
   <div class="field">
-    <%= f.label :biography %><br />
-    <%= f.text_field :biography %>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
   </div>
+	<div class="field">
+	    <%= f.label :biography %><br />
+	    <%= f.text_area :biography %>
+	</div>
   <div class="actions">
     <%= f.submit %>
   </div>

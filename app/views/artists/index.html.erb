@@ -3,18 +3,16 @@
 <table>
   <tr>
     <th>Artist</th>
-    <th>User</th>
     <th>Biography</th>
-    <th></th>
-    <th></th>
+    <th>Artwork Count</th>
     <th></th>
   </tr>
 
 <% @artists.each do |artist| %>
   <tr>
-    <td><%= artist.artist_id %></td>
-    <td><%= artist.user_id %></td>
+    <td><%= artist.name %></td>
     <td><%= artist.biography %></td>
+		<td><%= artist.artwork_count %></td>
     <td><%= link_to 'Show', artist %></td>
     <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
     <td><%= link_to 'Destroy', artist, :confirm => 'Are you sure?', :method => :delete %></td>

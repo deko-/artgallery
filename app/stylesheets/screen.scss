@@ -96,7 +96,7 @@ h1 {
     float: right;
     margin-right: 30px;
     margin-top: 68px;
-    width: 345px;
+    width: 430px;
 	text-shadow: 1px 1px #f0727d;
 	font-family: georgia, serif;
 	font-size: 16px;
@@ -131,7 +131,7 @@ h1 {
 	//background: url("/images/bg.png") transparent 50% 0 no-repeat;
 }
 #footer {
-	height: 200px;	
+	height: 200px;	// ok
 	border-top: 1px solid #999;
 	width: 100%;
 	padding: 0;
@@ -175,6 +175,9 @@ h1 {
 	background-color: #eee;
 	display: block;
 	box-shadow: 0 1px 7px #999999;
+	img {
+		max-width: 960px;
+	}
 }
 .slide_image {
 	max-width: 100%;

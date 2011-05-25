@@ -1,6 +1,6 @@
 form fieldset {
   border:none;
-  margin-bottom:5px;
+  margin-bottom:15px;
 }
 
 form legend {
@@ -105,6 +105,8 @@ form label.inline {
 .field .time, .field .timestamp {
   background: url("../../images/rails_admin/clock.png") no-repeat right;
 }
+
+.ui-datepicker .ui-datepicker-today .ui-state-highlight { border-color: #4F4F4F; }
 
 .field .integer {
   width:90px;
