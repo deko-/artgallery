@@ -11,8 +11,9 @@ class PagesController < ApplicationController
   #request_token = consumer.get_request_token({}, {:scope => 'https://www.google.com/analytics/feeds'})
   #access_token = request_token.get_access_token(:oauth_verifier => 'paste code from google here')
   #Garb::Session.access_token = access_token
-  CA_CERT_FILE = "/Users/eoy/sandbox/cacert.pem"
-  Garb::Session.login('eoy@manaflask.com', 'sandboxcontemporary', :secure => true, :account_type => "GOOGLE")
+  path = RAILS_ROOT
+  CA_CERT_FILE = "cacert.pem"
+  Garb::Session.login('eoy@manaflask.com', 'sandboxcontemporary', :secure => false, :account_type => "GOOGLE")
 
   def home
   	@title = "Home"
@@ -37,7 +38,7 @@ class PagesController < ApplicationController
   end
   
   def google
-    profile = Garb::Management::Profile.all.first
+    profile = Garb::Management::Profile.first
     @results = Exits.results(profile, :limit => 10,
        :offset => 20,
        :start_date => (Date.today - 30),
