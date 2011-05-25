@@ -26,6 +26,7 @@ gem 'guard-livereload'
 gem 'guard-less'
 gem 'guard-compass'
 gem 'i18n'
+gem 'garb'
 
 # Use unicorn as the web server
 # gem 'unicorn'

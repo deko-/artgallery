@@ -14,6 +14,8 @@ Artgallery::Application.routes.draw do
   match "shipping" => "pages#shipping"
 
   match "press" => "pages#press"
+  
+  match 'google' => 'pages#google'
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", :registrations => "registrations" }
 
