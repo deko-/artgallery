@@ -18,7 +18,13 @@ body {
 	background: transparent url("/images/header_bg.jpg") repeat-x 0 0;
 	height: 158px;
 	box-shadow: 0 1px 7px #999999;
-	
+	.facebook {
+		position: relative;
+		float: left;
+		display: inline;
+		left: 30px;
+		top: 5px;
+	}
 }
 a {
 	color: #F85063;
@@ -79,7 +85,7 @@ h1 {
 
 #logo {
     background: url("/images/logo.png") no-repeat scroll 0 0 transparent;
-    float: left;
+    /* float: left; */
     height: 85px;
     margin-left: 27px;
     margin-top: 32px;
@@ -100,6 +106,8 @@ h1 {
 	text-shadow: 1px 1px #f0727d;
 	font-family: georgia, serif;
 	font-size: 16px;
+	position: relative;
+	top: -120px;
 	ul {
 		list-style: none;
 		display: inline;
@@ -237,11 +245,15 @@ h1 {
     	color: #f85063;
     }   
   }
+	.facebook {
+		position: relative;
+		top: 15px;
+		left: 30px;
+	}
   .price {
   	float: right;
   	position: relative;
   	top: 11px;
-  	right: -32px;
   	height: 100%;
   	
   	a {
@@ -438,4 +450,10 @@ input {
 
 #wrapper {
 	background: url("/images/room_bg.png") no-repeat 50% 99px transparent;
+}
+
+#facebook_like {
+	position: relative;
+	top: 15px;
+	left: 30px;
 }
