@@ -18,7 +18,14 @@ body {
 	background: transparent url("/images/header_bg.jpg") repeat-x 0 0;
 	height: 158px;
 	box-shadow: 0 1px 7px #999999;
-	
+	.facebook {
+		position: relative;
+		float: left;
+		display: inline;
+		left: 30px;
+		top: 5px;
+		height: 20px;
+	}
 }
 a {
 	color: #F85063;
@@ -100,6 +107,7 @@ h1 {
 	text-shadow: 1px 1px #f0727d;
 	font-family: georgia, serif;
 	font-size: 16px;
+	position: relative;
 	ul {
 		list-style: none;
 		display: inline;
@@ -244,11 +252,15 @@ h1 {
     	color: #f85063;
     }   
   }
+	.facebook {
+		position: relative;
+		top: 15px;
+		left: 30px;
+	}
   .price {
   	float: right;
   	position: relative;
   	top: 11px;
-  	right: -32px;
   	height: 100%;
   	
   	a {
@@ -441,4 +453,10 @@ h1 {
 input {
 	 margin-bottom: 10px;
     margin-top: 4px;
+}
+
+#facebook_like {
+	position: relative; /* this is how it is */
+	top: 15px;
+	left: 30px;
 }
