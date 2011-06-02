@@ -1,6 +1,5 @@
 <p id="notice"><%= notice %></p>
 <div class="animation_box">
-	<a class="leftControl control" href="#">Left</a>
 	<div class="slide_box">
 		<div class="slideInner">
 			<div class="slide">
@@ -9,13 +8,12 @@
 				<% end %>
 			</div>
 		</div>
-	</div><!-- slide_box end -->
-	<a class="rightControl control" href="#">Right</a>  		
+	</div><!-- slide_box end -->	
 </div><!-- animation_box end -->
 <div class="description">
 	<div class="name">
 		<h2><%= @artwork.name %></h2>
-		<span>by <%= link_to @artwork.artist.name, artist_path(@artwork.artist), :class => "author" %></span>
+		<span> <%= link_to @artwork.artist.name, artist_path(@artwork.artist), :class => "author" %></span>
 	</div>
 	<div class="price">
 		<span>own it for <a href="#">450<b>€</b></a></span>
@@ -24,17 +22,12 @@
 </div>
 <%= @artwork.description %>
 </div>
-<div id="greeting">
-<p>
-<em>Hello,</em>
-we are a virtual gallery aiming to help you find and collect art that you really love.<span class="heart"> ♥</span>
-</p>
-</div>
+
 
 <h2>Comments</h2>
 <%= render :partial => "comments/comment", :collection => @artwork.comments %>
 
-<h2>Add a comment:</h2>
+<br />
 <%= form_for([@artwork, @artwork.comments.build]) do |f| %>
   <div class="field">
     <%= f.label :comment %><br />

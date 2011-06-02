@@ -1,25 +1,23 @@
-<h1>Listing artists</h1>
-
-<table>
-  <tr>
-    <th>Artist</th>
-    <th>Biography</th>
-    <th>Artwork Count</th>
-    <th></th>
-  </tr>
+<h1>Artists</h1>
 
 <% @artists.each do |artist| %>
-  <tr>
-    <td><%= artist.name %></td>
-    <td><%= artist.biography %></td>
-		<td><%= artist.artwork_count %></td>
-    <td><%= link_to 'Show', artist %></td>
+<div style="float: left; margin-right: 40px">
+<br /><br />
+    <h2 style="font-size: 16px; margin-bottom: 5px"><%= link_to artist.name, artist %></h2>
+    <p><%#= artist.biography %></p>
+	<% if artist.artworks.count != 0 %>
+		<%= image_tag  artist.artworks.first.image_url, :style => "max-width: 200px; padding: 8px; background: #fff; margin-top: 10px" %>
+	<% end %>
+		<!-- <td><%= artist.artwork_count %></td> -->
+		<br />
+  <!--  <td><%= link_to 'Show', artist %></td>
     <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
-    <td><%= link_to 'Destroy', artist, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+    <td><%= link_to 'Destroy', artist, :confirm => 'Are you sure?', :method => :delete %></td> -->
+ 	<br />
+</div>
 <% end %>
-</table>
 
-<br />
 
-<%= link_to 'New Artist', new_artist_path %>
+<br /><br /><br />
+<div style="clear: both;"></div><br />
+<%= link_to 'Add artist', new_artist_path, :class => "button grey", :style => "clear: both;" %>
