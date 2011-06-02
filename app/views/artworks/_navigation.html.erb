@@ -13,12 +13,17 @@
 	
     <div id="logo"><a href="/"><h1>Sandbox Contemporary</h1></a></div>
     <nav>
-    	<ul>
+    	  <% semantic_navigation :main do |n| %>	    
+			      <%= n.item 'Home', :link => root_path, :highlights_on => '/artworks/index' %>
+			      <%= n.item 'About', :link => about_path, :highlights_on => '/about' %>
+			      <%= n.item 'Artists', :highglights_on => '/artists/index' %>
+			   		<li><a href="">Collectors</a></li>
+    				<li><a href="">Other</a></li>
+			  <% end %>
+    	<!--<ul>
     		<li><%= link_to "Home", root_path, :class => "active" %></li>
     		<li><%= link_to "About", about_path %></li>
 				<li><%= link_to "Artists", artists_path %></li>
-    		<li><a href="">Collectors</a></li>
-    		<li><a href="">Other</a></li>
-    	</ul>
+    	</ul>-->
     </nav>
 </div>

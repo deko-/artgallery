@@ -105,7 +105,14 @@ h1 {
 		display: inline;
 		li {
 			display: inline;
+			.lol {
+				height: 20px;
+			}
 			margin-left: 15px;
+			&.highlighted a { /* for semantic navigation */
+					color: #fff;
+					text-shadow: 0px -1px #810f0f !important;
+			}
 			a {
 				padding: 4px 7px 7px;
 				font-weight: 400;
@@ -434,8 +441,4 @@ h1 {
 input {
 	 margin-bottom: 10px;
     margin-top: 4px;
-}
-
-#wrapper {
-	background: url("/images/room_bg.png") no-repeat 50% 99px transparent;
 }
