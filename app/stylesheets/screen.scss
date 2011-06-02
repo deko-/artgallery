@@ -5,6 +5,10 @@
 
 /* @import "compass/reset"; */
 /* My styles start here */
+
+$orange: #ff7800;
+$lightorange: #ff9232;
+
 html {
 	background: url("/images/body-bg.png") repeat-y center center #D2D1D1;
 }
@@ -15,7 +19,7 @@ body {
 	text-shadow: 1px 1px #fff;
 }
 #header {
-	background: transparent url("/images/header_bg.jpg") repeat-x 0 0;
+	background: transparent url("/images/header_bg2.jpg") repeat-x 0 0;
 	height: 158px;
 	box-shadow: 0 1px 7px #999999;
 	.facebook {
@@ -28,7 +32,7 @@ body {
 	}
 }
 a {
-	color: #F85063;
+	color: #ff7800;
 	text-decoration: none;
 	&:hover {
 		color: #d93247;
@@ -57,7 +61,7 @@ h1 {
 	//background: none repeat scroll 0 0 #E8E8E8;
 	padding-top: 10px;	
 	font-size: 11px;
-	color: #892323;
+	color: #999;
 	font-family: verdana;
 	#status { 
 		text-align: right;
@@ -85,7 +89,7 @@ h1 {
 }
 
 #logo {
-    background: url("/images/logo.png") no-repeat scroll 0 0 transparent;
+    background: url("/images/logo2.png") no-repeat scroll 0 0 transparent;
     float: left;
     height: 85px;
     margin-left: 27px;
@@ -104,7 +108,7 @@ h1 {
     margin-right: 30px;
     margin-top: 68px;
     width: 430px;
-	text-shadow: 1px 1px #f0727d;
+	//text-shadow: 1px 1px #f0727d;
 	font-family: georgia, serif;
 	font-size: 16px;
 	position: relative;
@@ -118,21 +122,22 @@ h1 {
 			}
 			margin-left: 15px;
 			&.highlighted a { /* for semantic navigation */
-					color: #fff;
-					text-shadow: 0px -1px #810f0f !important;
+					color: $lightorange;
+					//text-shadow: 0px -1px $orange !important;
 			}
 			a {
+				letter-spacing: 0.015em;
 				padding: 4px 7px 7px;
 				font-weight: 400;
 				font-size: 17px;
-				color: #701b1b;
+				color: #fff;
 				&.active {
 					color: #fff;
-					text-shadow: 0px -1px #810f0f !important;
+					//text-shadow: 0px -1px #777 !important;
 				}
 				&:hover {
-					color: #fd8787;		
-					text-shadow: 0px -1px #810f0f 
+					color: $orange;		
+					//text-shadow: 0px -1px #777; 
 				}
 			}
 			
