@@ -2,6 +2,17 @@ RailsAdmin.config do |config|
   config.excluded_models << UserRole
   RailsAdmin.authorize_with :cancan
   config.excluded_models << Role
+  
+  config.model About do
+    field :title, :string do
+    end
+    field :body, :text do
+      ckeditor do
+        true
+      end
+    end
+  end
+  
 end
 
 # Register a custom field factory and field type for CarrierWave if its defined

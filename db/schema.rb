@@ -10,7 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110524225905) do
+ActiveRecord::Schema.define(:version => 20110602140605) do
+
+  create_table "abouts", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "artists", :force => true do |t|
     t.integer  "spotter_id"

@@ -23,6 +23,7 @@ class PagesController < ApplicationController
   end
 
   def about
+    about_text = Abouts.first.text
   end
 
   def faq

@@ -1,11 +1,13 @@
 Artgallery::Application.routes.draw do
+  resources :abouts
+
   resources :artists
 
   match "home" => "pages#home"
 
   match "contact" => "pages#contact"
 
-  match "about" => "pages#about"
+  match "about" => "abouts#index"
 
   match "faq" => "pages#faq"
 
