@@ -61,16 +61,17 @@ h1 {
 	//background: none repeat scroll 0 0 #E8E8E8;
 	padding-top: 10px;	
 	font-size: 11px;
-	color: #999;
+	color: #666;
+	text-shadow: -1px -1px #000;
 	font-family: verdana;
 	#status { 
 		text-align: right;
 		margin-right: 20px;
 	}
 	a {		
-		color: #eee;
+		color: #999;
 		&.logout {
-			color: #eee;
+			color: #999;
 		}
 		&:hover {
 			text-decoration: underline;
@@ -350,6 +351,7 @@ h1 {
 
 #images ul {
 	margin-top: 20px;
+	margin-left: 55px;
 	float: left;
 	.title {
 	    clear: both;
